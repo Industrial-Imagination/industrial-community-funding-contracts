@@ -1,0 +1,13 @@
+✔ reverse reproduces the supplied 131 bytes in seven rows (1.013625ms)
+✔ packaged module contains its artwork, font and licenses (12.12625ms)
+✔ ERC721A preview mint reads tokenId and ignores other contracts' events (8.87275ms)
+✔ release retries reject missing or changed compiler fingerprints (2.062875ms)
+✔ SeaDrop dependency pins are chain-specific and fail closed (0.232916ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 151.743916

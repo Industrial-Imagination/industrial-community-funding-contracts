@@ -1,0 +1,26 @@
+No files changed, compilation skipped
+2026-11-08T15:45:06.980366Z  WARN evm::traces::external: etherscan config not found
+
+Ran 19 tests for test/Security.t.sol:SecurityTest
+[PASS] testAllSoulboundTransferAndApprovalEntrypointsReject() (gas: 469035)
+[PASS] testExtremePeriodsAreRejectedBeforeAcceptingFunds() (gas: 11799)
+[PASS] testFuzzInstallmentModel(uint256,uint80,uint16,uint16) (runs: 256, μ: 2252456, ~: 2187125)
+[PASS] testLargestSupportedPrincipalAndDurationDoNotOverflow() (gas: 854923)
+[PASS] testOwnerCallbackCannotClaimUpfrontTwice() (gas: 1053874)
+[PASS] testRealSeaDropAllowlistOddTreeAndTermsCannotBeForged() (gas: 601066)
+[PASS] testRealSeaDropConfigurationCannotBypassFixedEconomics() (gas: 44136)
+[PASS] testRealSeaDropPayoutRedirectInFeeCallbackCannotStealCurrentPayment() (gas: 1071388)
+[PASS] testRealSeaDropPayoutRedirectInNFTCallbackRevertsEverything() (gas: 949772)
+[PASS] testRealSeaDropReceiverAndFeeCannotFinalizeBeforeSettlement() (gas: 965834)
+[PASS] testRealSeaDropRejectingFeeRollsBackMintAndValue() (gas: 830143)
+[PASS] testRealSeaDropRejectingNFTRollsBackMintAndValue() (gas: 822493)
+[PASS] testRealSeaDropSameBlockBurstHasNoPendingSettlementLeak() (gas: 3674425)
+[PASS] testRealSeaDropSponsoredMintAndWrongFeeRecipient() (gas: 558531)
+[PASS] testRefundCallbackCannotBurnTwiceOrDrainOtherHolder() (gas: 1323720)
+[PASS] testRejectingHolderGetsForcedRefundWithoutBlockingOthers() (gas: 1271468)
+[PASS] testReviewDeadlineAndMintDeadlineBoundaries() (gas: 925980)
+[PASS] testWindDownReserveHandlesEntireUint256Balance() (gas: 630711)
+[PASS] testZeroFeeAndOneWeiPrincipalConserveEveryWei() (gas: 1073289)
+Suite result: ok. 19 passed; 0 failed; 0 skipped; finished in 4.29s (5.15s CPU time)
+
+Ran 1 test suite in 4.88s (4.29s CPU time): 19 tests passed, 0 failed, 0 skipped (19 total tests)

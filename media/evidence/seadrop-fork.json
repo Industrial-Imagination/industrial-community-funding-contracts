@@ -1,0 +1,71 @@
+{
+  "forkBlock": 56119875,
+  "publicTransactions": false,
+  "release": {
+    "chainId": 84532,
+    "registry": "0xFe1411d6864592549AdE050215482e4385dFa0FB",
+    "block": 56119875,
+    "assets": [
+      {
+        "role": "three",
+        "filename": "three-v0.162.0-module.min.js.Base64.gz",
+        "size": 225020,
+        "hash": "0xbb87a331ea68a93f8c3b5d679498aa64d56a2e5fd72d52cfd804d4c5a972ad1e",
+        "pointer": "0x45466738CDDB1245C6e2F508EF211B286365A747",
+        "status": "verified"
+      },
+      {
+        "role": "card",
+        "filename": "iif-card-5f655ae2dd6e51ad.txt",
+        "size": 64416,
+        "hash": "0x5f655ae2dd6e51ad195f3e45c07c88d0d822dca43adaa995434cc6dcb8c07578",
+        "pointer": "0x0319476511D860b9Cb6aB28C3E6BB48671603030",
+        "status": "verified"
+      },
+      {
+        "role": "preview",
+        "filename": "iif-preview-f2c74a9fe2f7ae7b.webp",
+        "size": 17770,
+        "hash": "0xf2c74a9fe2f7ae7b04e346fdc29f67227f97594763855be79d646877b26f6e40",
+        "pointer": "0x0fD58bc4060269d3F9a77c7dB1581E63b68a8a7A",
+        "status": "verified"
+      }
+    ],
+    "collectionType": "IndustrialImaginationSeaDropFunding",
+    "rendererTransaction": "0x1ddda29d83a2cb99e1cf7d6f42e47573302bc6a625910a339cd782f3ffcc2a53",
+    "fundingTransaction": "0x3b7a0e5476927b4e53b2047448e717ae39347b4f673ad2075c6ed144b58d50e1",
+    "fundingDeploymentBlock": 56119877,
+    "renderer": "0xB8F9A721856f045c475e2a5CAFb2f5f9Ce0c45EC",
+    "funding": "0x17287e6B83a428E41EC944798126CFC246E1A1C7",
+    "seaDrop": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+    "seaDropCodeHash": "0x7ebd6750c54fd6e4667af4d3310cf02bc420606f6e3eaed9654127047f5166c0",
+    "feeRecipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "feeBps": 333,
+    "grossPrice": "100003",
+    "netPrincipalPerToken": "96672"
+  },
+  "netReceived": "290019",
+  "seaDropFees": "9990",
+  "roundingSurplus": "3",
+  "netPrincipalPerToken": "96672",
+  "lockedPerToken": "67671",
+  "burnRefund": "33836",
+  "metadataGas": "37205800",
+  "htmlHash": "0x9504c7838ece6654667cc5f4816ed54c85bbdd6098e15f299f9b67f14434c35f",
+  "finalContractBalance": 0,
+  "checks": [
+    "real SeaDrop ERC165 registration",
+    "fixed-term allowlist mint",
+    "free-leaf rejection",
+    "sponsored public mint",
+    "wallet and supply cap",
+    "net settlement",
+    "permissionless finalization",
+    "midpoint burn",
+    "owner stream claim",
+    "zero refund after vesting",
+    "metadata existence and freezing",
+    "exact accounting",
+    "onchain player bytes"
+  ]
+}

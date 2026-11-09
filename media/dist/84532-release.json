@@ -1,0 +1,54 @@
+{
+  "chainId": 84532,
+  "registry": "0xFe1411d6864592549AdE050215482e4385dFa0FB",
+  "block": 54460407,
+  "assets": [
+    {
+      "role": "three",
+      "filename": "three-v0.162.0-module.min.js.Base64.gz",
+      "size": 225020,
+      "hash": "0xbb87a331ea68a93f8c3b5d679498aa64d56a2e5fd72d52cfd804d4c5a972ad1e",
+      "pointer": "0x45466738CDDB1245C6e2F508EF211B286365A747",
+      "status": "verified"
+    },
+    {
+      "role": "card",
+      "filename": "iif-card-5f655ae2dd6e51ad.txt",
+      "size": 64416,
+      "hash": "0x5f655ae2dd6e51ad195f3e45c07c88d0d822dca43adaa995434cc6dcb8c07578",
+      "pointer": "0x0319476511D860b9Cb6aB28C3E6BB48671603030",
+      "status": "verified"
+    },
+    {
+      "role": "preview",
+      "filename": "iif-preview-f2c74a9fe2f7ae7b.webp",
+      "size": 17770,
+      "hash": "0xf2c74a9fe2f7ae7b04e346fdc29f67227f97594763855be79d646877b26f6e40",
+      "pointer": "0x0fD58bc4060269d3F9a77c7dB1581E63b68a8a7A",
+      "status": "verified"
+    }
+  ],
+  "collectionType": "IndustrialImaginationSeaDropFunding",
+  "rendererTransaction": "0x167feff005460f6f8c4e1235b74552c2bb1c361fd1ac283157f3e00bc6b03e41",
+  "fundingTransaction": "0xf07fb3fd4fd7b5a789711c3b6e26f08476ef6490adb2808df67df689514a7a17",
+  "fundingDeploymentBlock": 54460430,
+  "renderer": "0x4CB213bA857830E68584766Ba79a97e99c2A9650",
+  "funding": "0xCe9dA9d939DB99c89586A98e5AB3628e1f4b7D63",
+  "seaDrop": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+  "seaDropCodeHash": "0x7ebd6750c54fd6e4667af4d3310cf02bc420606f6e3eaed9654127047f5166c0",
+  "feeRecipient": "0x6D40D1cB330B31f5f596d98A01FF60Efcb626967",
+  "feeBps": 250,
+  "grossPrice": "100000000000000",
+  "netPrincipalPerToken": "97500000000000",
+  "previewMint": {
+    "tokenId": "1",
+    "recipient": "0x6D40D1cB330B31f5f596d98A01FF60Efcb626967",
+    "transaction": "0x24dc664f13d7bf93015bf088be45774631cc9965f1175d9bf7efb9733af03a29",
+    "metadataName": "Industrial Imagination Funding #1"
+  },
+  "links": {
+    "contract": "https://sepolia.basescan.org/address/0xCe9dA9d939DB99c89586A98e5AB3628e1f4b7D63",
+    "transaction": "https://sepolia.basescan.org/tx/0x24dc664f13d7bf93015bf088be45774631cc9965f1175d9bf7efb9733af03a29",
+    "openSea": "https://testnets.opensea.io/assets/base-sepolia/0xCe9dA9d939DB99c89586A98e5AB3628e1f4b7D63/1"
+  }
+}

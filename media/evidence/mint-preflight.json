@@ -1,0 +1,77 @@
+{
+  "chainId": 84532,
+  "sourceBlock": 56342347,
+  "publicTransactions": false,
+  "settings": {
+    "OWNER": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "MAX_SUPPLY": "3",
+    "MAX_PER_WALLET": "3",
+    "MINT_PRICE_WEI": "100003",
+    "MINT_PERIOD": "86400",
+    "VESTING_PERIOD": "15552000",
+    "INITIAL_PAYOUT_BPS": "3000",
+    "SEADROP_ADDRESS": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+    "SEADROP_FEE_BPS": "333",
+    "FEE_RECIPIENT": "0x0000000000000000000000000000000000000FEE",
+    "BACKUP_WALLET": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+  },
+  "quantities": [
+    "1",
+    "2"
+  ],
+  "netReceived": "290019",
+  "release": {
+    "chainId": 84532,
+    "seaDropCheckedBlock": 56342347,
+    "seaDropCodeHash": "0x7ebd6750c54fd6e4667af4d3310cf02bc420606f6e3eaed9654127047f5166c0",
+    "registry": "0xFe1411d6864592549AdE050215482e4385dFa0FB",
+    "block": 56342347,
+    "assets": [
+      {
+        "role": "three",
+        "filename": "three-v0.162.0-module.min.js.Base64.gz",
+        "size": 225020,
+        "hash": "0xbb87a331ea68a93f8c3b5d679498aa64d56a2e5fd72d52cfd804d4c5a972ad1e",
+        "pointer": "0x45466738CDDB1245C6e2F508EF211B286365A747",
+        "status": "verified"
+      },
+      {
+        "role": "card",
+        "filename": "iif-card-5f655ae2dd6e51ad.txt",
+        "size": 64416,
+        "hash": "0x5f655ae2dd6e51ad195f3e45c07c88d0d822dca43adaa995434cc6dcb8c07578",
+        "pointer": "0x0319476511D860b9Cb6aB28C3E6BB48671603030",
+        "status": "verified"
+      },
+      {
+        "role": "preview",
+        "filename": "iif-preview-f2c74a9fe2f7ae7b.webp",
+        "size": 17770,
+        "hash": "0xf2c74a9fe2f7ae7b04e346fdc29f67227f97594763855be79d646877b26f6e40",
+        "pointer": "0x0fD58bc4060269d3F9a77c7dB1581E63b68a8a7A",
+        "status": "verified"
+      }
+    ],
+    "collectionType": "IndustrialImaginationGovernedFunding",
+    "buildHashes": {
+      "collection": "0x55d5b87f4a60e739eb1099d6d12d5c6e4c1896b231f5ec7092ed6e74ab81a824",
+      "renderer": "0x6cc6d2beddaca8a701f564a19243284e01b9983a09dff87a7287e6682f74ce9b"
+    },
+    "runtimeHashes": {
+      "collection": "0xa225dc9598fc484ef17b29f094601360c3a30d84010dcaba6dd6a5b875e8602b",
+      "renderer": "0x7831dd7ecef76b1eb4346488caa8f938a84fb7364a8d2a604e8bc85775edc636"
+    },
+    "rendererTransaction": "0xfcea9f849c07576898921c05a3980884941e8a6560eb1f1b7ae3194f3ee59b9a",
+    "fundingTransaction": "0x26de5d81eedd7ee5738e42d6db308cf0d3143c17989abd1045703d177133e375",
+    "fundingDeploymentBlock": 56342349,
+    "renderer": "0x074b0F8Ab21dc3dBAd7De7323A14FB49f2cfFb6A",
+    "funding": "0x542e7117639Aa7E426b9e47e748E5a37bfCCE6a8",
+    "seaDrop": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+    "feeRecipient": "0x0000000000000000000000000000000000000FEE",
+    "feeBps": 333,
+    "grossPrice": "100003",
+    "netPrincipalPerToken": "96672",
+    "council": "0xbA82b46aCB96D57959aD849375c2195cf3eA331b",
+    "governance": "holder-vote"
+  }
+}

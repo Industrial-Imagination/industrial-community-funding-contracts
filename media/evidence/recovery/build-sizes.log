@@ -1,0 +1,4361 @@
+2026-11-09T02:11:08.860710Z  WARN foundry_common::preprocessor: failed preprocessing err=solar reported errors:
+
+error[2353]: invalid contract `IERC165` specified in override list
+    ╭▸ lib/seadrop/src/ERC721ContractMetadata.sol:352:9
+    │
+352 │         override(IERC165, ERC721A)
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+
+error[2353]: invalid contract `IERC165` specified in override list
+    ╭▸ lib/seadrop/src/ERC721ContractMetadata.sol:352:9
+    │
+352 │         override(IERC165, ERC721A)
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+
+error[2353]: invalid contract `IERC165` specified in override list
+    ╭▸ lib/seadrop/src/ERC721SeaDrop.sol:470:9
+    │
+470 │         override(IERC165, ERC721ContractMetadata)
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+
+error[2353]: invalid contract `ERC721ContractMetadata` specified in override list
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:127:5
+    │
+127 │     override(ERC721ContractMetadata, ISeaDropTokenContractMetadata)
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+Compiling 73 files with Solc 0.8.38
+Solc 0.8.38 finished in 16.21s
+Compiler run successful with warnings:
+Warning (8429): Virtual modifiers are deprecated and scheduled for removal.
+  --> lib/seadrop/lib/solmate/src/utils/ReentrancyGuard.sol:10:5:
+   |
+10 |     modifier nonReentrant() virtual {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8429): Virtual modifiers are deprecated and scheduled for removal.
+   --> lib/seadrop/src/SeaDrop.sol:135:5:
+    |
+135 |     modifier onlyINonFungibleSeaDropToken() virtual {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8429): Virtual modifiers are deprecated and scheduled for removal.
+   --> lib/solady/src/auth/Ownable.sol:274:5:
+    |
+274 |     modifier onlyOwner() virtual {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:23:26:
+   |
+23 |     function _throwError(RecoverError error) private pure {
+   |                          ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:89:29:
+   |
+89 |         (address recovered, RecoverError error) = tryRecover(hash, signature);
+   |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:113:29:
+    |
+113 |         (address recovered, RecoverError error) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:152:29:
+    |
+152 |         (address recovered, RecoverError error) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (5740): Unreachable code.
+   --> lib/seadrop/lib/ERC721A/contracts/ERC721A.sol:636:9:
+    |
+636 |         if (to.code.length != 0)
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+
+
+╭--------------------------------------+------------------+-------------------+--------------------+---------------------╮
+| Contract                             | Runtime Size (B) | Initcode Size (B) | Runtime Margin (B) | Initcode Margin (B) |
++========================================================================================================================+
+| CallbackProbe                        | 1,090            | 1,116             | 23,486             | 48,036              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ERC721A                              | 2,999            | 3,931             | 21,577             | 45,221              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ERC721ContractMetadata               | 6,814            | 7,834             | 17,762             | 41,318              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| ERC721SeaDrop                        | 15,196           | 16,635            | 9,380              | 32,517              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FundingAllowlist                     | 844              | 870               | 23,732             | 48,282              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FundingCardRenderer                  | 6,062            | 7,730             | 18,514             | 41,422              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FundingCouncil                       | 6,321            | 6,410             | 18,255             | 42,742              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| FundingRecovery                      | 2,281            | 2,355             | 22,295             | 46,797              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| IndustrialImaginationFunding         | 8,467            | 16,251            | 16,109             | 32,901              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| IndustrialImaginationGovernedFunding | 24,253           | 42,995            | 323                | 6,157               |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| IndustrialImaginationSeaDropFunding  | 21,552           | 31,311            | 3,024              | 17,841              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SeaDrop                              | 12,507           | 12,739            | 12,069             | 36,413              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SeaDropHarness                       | 2,851            | 2,877             | 21,725             | 46,275              |
+|--------------------------------------+------------------+-------------------+--------------------+---------------------|
+| SecurityWallet                       | 1,768            | 1,794             | 22,808             | 47,358              |
+╰--------------------------------------+------------------+-------------------+--------------------+---------------------╯
+
+2026-11-09T02:11:25.136073Z  WARN evm::traces: failed to flush signature cache err=failed to create file "/Users/matheus/.foundry/cache/signatures": Operation not permitted (os error 1)
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/FundingCouncil.sol:27:36
+   │
+27 │   ICouncilFunding public immutable funding;
+   │                                    ━━━━━━━ help: consider using: `FUNDING`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[mixed-case-variable]: mutable variables should use mixedCase
+   ╭▸ test/Security.t.sol:30:15
+   │
+30 │   bool public rejectETH;
+   │               ━━━━━━━━━ help: consider using: `rejectEth`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-variable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/IndustrialImaginationSeaDropFunding.sol:43:38
+   │
+43 │   FundingAllowlist private immutable _allowlistBuilder;
+   │                                      ━━━━━━━━━━━━━━━━━ help: consider using: `_ALLOWLIST_BUILDER`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/IndustrialImaginationGovernedFunding.sol:12:35
+   │
+12 │   FundingCouncil public immutable council;
+   │                                   ━━━━━━━ help: consider using: `COUNCIL`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/FundingCore.sol:23:29
+   │
+23 │   bytes32 private immutable _rendererCodeHash;
+   │                             ━━━━━━━━━━━━━━━━━ help: consider using: `_RENDERER_CODE_HASH`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/IndustrialImaginationGovernedFunding.sol:14:36
+   │
+14 │   FundingRecovery public immutable recovery;
+   │                                    ━━━━━━━━ help: consider using: `RECOVERY`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[inline-assembly]: inline assembly (declared memory-safe); review business logic and side effects
+   ╭▸ src/CardFiles.sol:19:5
+   │
+19 │     assembly ("memory-safe") {
+   │     ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inline-assembly
+
+note[inline-assembly]: inline assembly (declared memory-safe); review business logic and side effects
+   ╭▸ src/CardFiles.sol:34:5
+   │
+34 │     assembly ("memory-safe") {
+   │     ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inline-assembly
+
+note[mixed-case-function]: function names should use mixedCase
+    ╭▸ src/FundingCore.sol:455:12
+    │
+455 │   function _sendETH(address to, uint256 amount) internal {
+    │            ━━━━━━━━ help: consider using: `_sendEth`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+
+note[mixed-case-variable]: mutable variables should use mixedCase
+   ╭▸ test/Security.t.sol:31:15
+   │
+31 │   bool public rejectNFT;
+   │               ━━━━━━━━━ help: consider using: `rejectNft`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-variable
+
+note[mixed-case-variable]: mutable variables should use mixedCase
+   ╭▸ test/Security.t.sol:33:68
+   │
+33 │   function configure(address target_, bytes calldata attack_, bool rejectETH_, bool rejectNFT_)
+   │                                                                    ━━━━━━━━━━ help: consider using: `rejectEth_`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-variable
+
+note[mixed-case-variable]: mutable variables should use mixedCase
+   ╭▸ test/Security.t.sol:33:85
+   │
+33 │   function configure(address target_, bytes calldata attack_, bool rejectETH_, bool rejectNFT_)
+   │                                                                                     ━━━━━━━━━━ help: consider using: `rejectNft_`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/mixed-case-variable
+
+note[low-level-calls]: Low-level calls should be avoided
+   ╭▸ test/Security.t.sol:47:22
+   │
+47 │       (succeeded,) = target.call(attack);
+   │                      ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+note[event-fields]: event has unindexed fields that may benefit from being indexed: excludedOwner (address)
+   ╭▸ src/FundingCouncil.sol:99:9
+   │
+99 │   event PeriodStarted(uint256 start, uint256 eligibleSupply, uint256 quorum, address excludedOwner);
+   │         ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/event-fields
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:292:55
+    │
+292 │       return (approved, _cumulativePayment(approved), false);
+    │                                                       ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:296:65
+    │
+296 │       if (elapsed < CYCLE + SILENCE_DELAY) return (approved, 0, false);
+    │                                                                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:299:67
+    │
+299 │       if (outcome(cycle) != Outcome.Silence) return (approved, 0, false);
+    │                                                                   ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:303:80
+    │
+303 │       return (cycle, cycle > paidThroughCycle ? _cumulativePayment(cycle) : 0, false);
+    │                                                                                ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:305:50
+    │
+305 │     if (result != Outcome.Silence) return (0, 0, false);
+    │                                                  ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:309:76
+    │
+309 │     if (cycle <= paidThroughCycle || silencePaid[cycle]) return (cycle, 0, true);
+    │                                                                            ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:310:57
+    │
+310 │     return (cycle, _vested(cycle) - _vested(cycle - 1), true);
+    │                                                         ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+note[unused-import]: unused imports should be removed
+  ╭▸ test/Security.t.sol:6:22
+  │
+6 │ import { MintParams, PublicDrop, AllowListData } from "seadrop/src/lib/SeaDropStructs.sol";
+  │                      ━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/unused-import
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/Security.t.sol:25:10
+   │
+25 │ contract SecurityWallet {
+   │          ━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/Security.t.sol:64:10
+   │
+64 │ contract SecurityTest is Test {
+   │          ━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ src/FundingCouncil.sol:4:11
+  │
+4 │ interface ICouncilFunding {
+  │           ━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ src/FundingCouncil.sol:15:10
+   │
+15 │ contract FundingCouncil {
+   │          ━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:29:30
+   │
+29 │     if (size < 224 || size > 128 + 96 * 32) revert InvalidAsset();
+   │                              ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:29:36
+   │
+29 │     if (size < 224 || size > 128 + 96 * 32) revert InvalidAsset();
+   │                                    ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:29:41
+   │
+29 │     if (size < 224 || size > 128 + 96 * 32) revert InvalidAsset();
+   │                                         ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Recovery.t.sol:13:22
+   │
+13 │     funding = deploy(3);
+   │                      ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Recovery.t.sol:69:20
+   │
+69 │     vm.deal(alice, 300009);
+   │                    ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Recovery.t.sol:71:29
+   │
+71 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+   │                             ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Recovery.t.sol:71:73
+   │
+71 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+   │                                                                         ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[locked-ether]: contract can receive ETH but has no mechanism to send it out
+   ╭▸ test/Security.t.sol:25:10
+   │
+25 │ contract SecurityWallet {
+   │          ━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/locked-ether
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:35:41
+   │
+35 │       tupleOffset := mload(add(encoded, 32))
+   │                                         ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:36:41
+   │
+36 │       arrayOffset := mload(add(encoded, 96))
+   │                                         ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:37:40
+   │
+37 │       sliceCount := mload(add(encoded, 128))
+   │                                        ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:40:22
+   │
+40 │       tupleOffset != 32 || arrayOffset != 64 || sliceCount == 0 || sliceCount > 32
+   │                      ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:40:81
+   │
+40 │       tupleOffset != 32 || arrayOffset != 64 || sliceCount == 0 || sliceCount > 32
+   │                                                                                 ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:41:20
+   │
+41 │         || size != 128 + 96 * sliceCount
+   │                    ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:41:26
+   │
+41 │         || size != 128 + 96 * sliceCount
+   │                          ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:44:96
+   │
+44 │     if (file.size == 0 || file.size > LIMIT || file.slices.length == 0 || file.slices.length > 32) {
+   │                                                                                                ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[missing-events-access-control]: `totalMinted` is changed without an event but is used for access control
+    ╭▸ src/FundingCore.sol:414:5
+    │
+414 │     totalMinted += quantity;
+    │     ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `mintedBy` is changed without an event but is used for access control
+    ╭▸ src/FundingCore.sol:415:5
+    │
+415 │     mintedBy[minter] += quantity;
+    │     ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/FundingCore.sol:237:3
+    │
+237 │ ┏   modifier onlyFundingOwner() {
+238 │ ┃     if (msg.sender != _fundingOwner()) revert NotAllowed();
+239 │ ┃     _;
+240 │ ┃   }
+    │ ┗━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+237 ±   modifier onlyFundingOwner() {
+238 +     _onlyFundingOwner();
+239 +     _;
+240 +   }
+241 + 
+242 +   function _onlyFundingOwner() internal {
+243 +     if (msg.sender != _fundingOwner()) revert NotAllowed();
+244 +   }
+    ╰╴
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/CardFiles.sol:54:31
+   │
+54 │       if (count > file.size - offset) revert InvalidAsset();
+   │                               ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/CardFiles.sol:48:21
+   │
+48 │     for (uint256 i; i < file.slices.length; ++i) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+   ╭▸ test/Recovery.t.sol:71:5
+   │
+71 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+   │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:189:17
+    │
+189 │     if (fees >= 10000 || price > type(uint80).max) revert InvalidSeaDropConfiguration();
+    │                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:190:21
+    │
+190 │     return price * (10000 - fees) / 10000;
+    │                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:190:37
+    │
+190 │     return price * (10000 - fees) / 10000;
+    │                                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/IndustrialImaginationFunding.sol:52:21
+   │
+52 │     for (uint256 i; i < quantity; ++i) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationFunding.sol:105:9
+    │
+105 │     if (block.timestamp > mintStartTime + MINT_PERIOD) revert MintPeriodEnded();
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[inline-assembly]: inline assembly (declared memory-safe); review business logic and side effects
+    ╭▸ test/FundingCard.t.sol:194:9
+    │
+194 │         assembly ("memory-safe") { mstore(add(encoded, offset), not(0)) }
+    │         ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/inline-assembly
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:25:38
+   │
+25 │     return deployWithVesting(supply, 180 days);
+   │                                      ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:33:7
+   │
+33 │       100003,
+   │       ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:52:53
+   │
+52 │       CardFiles.Asset(SSTORE2.write(abi.encode(File(4, slices))), keccak256(bytes("QUJD")));
+   │                                                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:22:63
+   │
+22 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("XQU")), 2, 4);
+   │                                                               ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:23:63
+   │
+23 │     slices[1] = BytecodeSlice(SSTORE2.write(bytes("JD!")), 1, 3);
+   │                                                               ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:29:7
+   │
+29 │       3, 3, 100003, 100, 1000, 3000, address(this), address(renderer), 'Lab "A"', "IIF"
+   │       ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:29:10
+   │
+29 │       3, 3, 100003, 100, 1000, 3000, address(this), address(renderer), 'Lab "A"', "IIF"
+   │          ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[missing-zero-check]: address parameter is used in a state write or value transfer without a zero-address check
+   ╭▸ test/Security.t.sol:33:22
+   │
+33 │   function configure(address target_, bytes calldata attack_, bool rejectETH_, bool rejectNFT_)
+   │                      ━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-zero-check
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/CardFiles.sol:23:37
+   │
+23 │     if (length <= 1 || prefix != 0) revert InvalidAsset();
+   │                                     ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/CardFiles.sol:51:9
+   │
+51 │         revert InvalidAsset();
+   │         ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/CardFiles.sol:54:39
+   │
+54 │       if (count > file.size - offset) revert InvalidAsset();
+   │                                       ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[empty-block]: empty function body
+   ╭▸ test/SeaDropFunding.t.sol:40:48
+   │
+40 │   function updatePayer(address, bool) external { }
+   │                                                ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/empty-block
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/FundingCore.sol:277:64
+    │
+277 │   function claimOwnerShare() external virtual onlyFundingOwner nonReentrant {
+    │                                                                ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:54:22
+   │
+54 │     funding = deploy(3);
+   │                      ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:58:20
+   │
+58 │     vm.deal(alice, 300009);
+   │                    ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:60:29
+   │
+60 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+   │                             ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:60:73
+   │
+60 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+   │                                                                         ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/GovernedFunding.t.sol:92:31
+   │
+92 │     vm.warp(block.timestamp + 72 hours);
+   │                               ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:104:22
+    │
+104 │     funding = deploy(3);
+    │                      ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:116:29
+    │
+116 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:180:77
+    │
+180 │     assertEq(funding.lastPaidVestedPerToken(), funding.LOCKED_PER_TOKEN() / 6);
+    │                                                                             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:189:81
+    │
+189 │     assertEq(funding.lastPaidVestedPerToken(), funding.LOCKED_PER_TOKEN() * 2 / 6);
+    │                                                                                 ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:195:21
+    │
+195 │     vm.warp(start + 37 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:200:77
+    │
+200 │     assertEq(funding.lastPaidVestedPerToken(), funding.LOCKED_PER_TOKEN() / 3);
+    │                                                                             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:205:21
+    │
+205 │     vm.warp(start + 30 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:208:21
+    │
+208 │     vm.warp(start + 33 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:211:21
+    │
+211 │     vm.warp(start + 37 days - 1);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:213:21
+    │
+213 │     vm.warp(start + 37 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:238:37
+    │
+238 │     vm.warp(council.finalizedAt() + 90 days);
+    │                                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:256:33
+    │
+256 │     funding = deployWithVesting(3, 185 days);
+    │                                 ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:260:20
+    │
+260 │     vm.deal(alice, 300009);
+    │                    ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:262:29
+    │
+262 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:262:73
+    │
+262 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+    │                                                                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:273:25
+    │
+273 │     vm.warp(finalized + 90 days - 1);
+    │                         ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:276:25
+    │
+276 │     vm.warp(finalized + 90 days);
+    │                         ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:281:53
+    │
+281 │     assertEq(funding.windDownOwnerReserve(), pool * 500 / 10000);
+    │                                                     ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:281:59
+    │
+281 │     assertEq(funding.windDownOwnerReserve(), pool * 500 / 10000);
+    │                                                           ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:282:53
+    │
+282 │     assertEq(funding.totalUnvested(), pool - pool * 500 / 10000);
+    │                                                     ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:282:59
+    │
+282 │     assertEq(funding.totalUnvested(), pool - pool * 500 / 10000);
+    │                                                           ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:294:48
+    │
+294 │     assertEq(deadline, council.finalizedAt() + 180 days);
+    │                                                ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:311:50
+    │
+311 │     assertEq(council.publicWindDownAt(), start + 273 days);
+    │                                                  ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:212:21
+    │
+212 │     for (uint256 i; i < wallets.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[empty-block]: empty function body
+   ╭▸ test/SeaDropFunding.t.sol:41:52
+   │
+41 │   function updateDropURI(string calldata) external { }
+   │                                                    ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/empty-block
+
+warning[missing-events-access-control]: `excludedOwner` is changed without an event but is used for access control
+    ╭▸ src/FundingCouncil.sol:136:5
+    │
+136 │     excludedOwner = funding.owner();
+    │     ━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:312:21
+    │
+312 │     vm.warp(start + 273 days - 1);
+    │                     ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:317:21
+    │
+317 │     vm.warp(start + 273 days);
+    │                     ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:331:21
+    │
+331 │     vm.warp(start + 30 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:332:21
+    │
+332 │     vm.warp(start + 67 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:336:21
+    │
+336 │     vm.warp(start + 90 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:345:56
+    │
+345 │     assertEq(council.lastMajorityDecisionAt(), start + 33 days);
+    │                                                        ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:346:21
+    │
+346 │     vm.warp(start + 123 days - 1);
+    │                     ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:349:21
+    │
+349 │     vm.warp(start + 123 days);
+    │                     ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:359:37
+    │
+359 │     funding.claimOwnerShareForCycle(3);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:385:32
+    │
+385 │     for (uint256 id = 1; id <= 3; id++) {
+    │                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:398:21
+    │
+398 │     vm.warp(start + 123 days);
+    │                     ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:401:30
+    │
+401 │     uint256 reserve = pool * 500 / 10000;
+    │                              ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:401:36
+    │
+401 │     uint256 reserve = pool * 500 / 10000;
+    │                                    ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:407:25
+    │
+407 │     for (uint256 i; i < 3; i++) {
+    │                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:408:38
+    │
+408 │       uint256 id = (uint256(order) % 3 + i) % 3 + 1;
+    │                                      ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:408:47
+    │
+408 │       uint256 id = (uint256(order) % 3 + i) % 3 + 1;
+    │                                               ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:442:12
+    │
+442 │     review(3, true);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:213:37
+    │
+213 │       if (wallets[i] == address(0)) revert InvalidSeaDropConfiguration();
+    │                                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[missing-events-arithmetic]: `finalizedAt` is changed without an event but is used in arithmetic
+    ╭▸ src/FundingCouncil.sol:127:5
+    │
+127 │     finalizedAt = block.timestamp;
+    │     ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:29:26
+   │
+29 │       3, 3, 100003, 100, 1000, 3000, address(this), address(renderer), 'Lab "A"', "IIF"
+   │                          ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:451:12
+    │
+451 │     review(3, false);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:454:28
+    │
+454 │     council.openEscapeVote(3, 1);
+    │                            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:33:20
+   │
+33 │     vm.deal(alice, 300009);
+   │                    ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[low-level-calls]: Low-level calls should be avoided
+   ╭▸ test/SeaDropFunding.t.sol:85:22
+   │
+85 │       (bool sent,) = fee.call{ value: cut }("");
+   │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:221:12
+    │
+221 │       return MintParams(
+    │ ┏━━━━━━━━━━━━┛
+222 │ ┃       GROSS_MINT_PRICE,
+223 │ ┃       MAX_PER_WALLET,
+224 │ ┃       mintStartTime,
+    ‡ ┃
+229 │ ┃       true
+230 │ ┃     );
+    │ ┗━━━━━┛ help: consider using named fields: `MintParams({ mintPrice: GROSS_MINT_PRICE, maxTotalMintableByWallet: MAX_PER_WALLET, startTime: mintStartTime, endTime: mintStartTime + MINT_PERIOD, dropStageIndex: 1, maxTokenSupplyForStage: MAX_SUPPLY, feeBps: SEADROP_FEE_BPS, restrictFeeRecipients: true })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:38:26
+   │
+38 │     funding.mint{ value: 300009 }(3);
+   │                          ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCore.sol:313:41
+    │
+313 │     if (!closeEarly && !mintComplete && block.timestamp <= mintStartTime + MINT_PERIOD) {
+    │                                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:472:32
+    │
+472 │     for (uint256 id = 1; id <= 3; id++) {
+    │                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:488:24
+    │
+488 │     council.voteReview(3, tokens(1, 1), true);
+    │                        ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:495:12
+    │
+495 │     review(3, false);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:496:10
+    │
+496 │     open(3);
+    │          ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:79:32
+   │
+79 │       require(block.chainid == 8453 || block.chainid == 84532, "unexpected fork network");
+   │                                ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:38:35
+   │
+38 │     funding.mint{ value: 300009 }(3);
+   │                                   ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:45:84
+   │
+45 │     string memory json = string(Base64.decode(LibString.slice(funding.tokenURI(1), 29)));
+   │                                                                                    ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:47:83
+   │
+47 │     string memory two = string(Base64.decode(LibString.slice(funding.tokenURI(2), 29)));
+   │                                                                                   ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:81:25
+   │
+81 │     for (uint256 i; i < 5; i++) {
+   │                         ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:82:97
+   │
+82 │       slices[0] = BytecodeSlice(chunk, uint32(i == 0 ? 0 : 1), uint32(i == 1 ? 6 : i == 2 ? 1 : 5));
+   │                                                                                                 ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:81:43
+   │
+81 │       bytes32 expected = block.chainid == 8453
+   │                                           ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[low-level-calls]: Low-level calls should be avoided
+   ╭▸ test/SeaDropFunding.t.sol:88:20
+   │
+88 │     (bool paid,) = payout[token].call{ value: msg.value - cut - shortfall }("");
+   │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:509:77
+    │
+509 │     assertEq(funding.lastPaidVestedPerToken(), funding.LOCKED_PER_TOKEN() / 6);
+    │                                                                             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:514:45
+    │
+514 │     uint256 approved = bound(paidCycles, 0, 3);
+    │                                             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:83:16
+   │
+83 │       if (i == 4) vm.etch(chunk, hex"ff51554a44");
+   │                ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:85:60
+   │
+85 │         CardFiles.Asset(SSTORE2.write(abi.encode(File(i == 3 ? 7 : 4, slices))), asset.hash);
+   │                                                            ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/FundingCard.t.sol:85:68
+   │
+85 │         CardFiles.Asset(SSTORE2.write(abi.encode(File(i == 3 ? 7 : 4, slices))), asset.hash);
+   │                                                                    ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:120:34
+    │
+120 │     uint256 t1 = bound(first, 0, 1000);
+    │                                  ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:123:25
+    │
+123 │     for (uint256 i; i < 3; i++) {
+    │                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:125:30
+    │
+125 │       uint256 id = reverse ? 3 - i : 1 + i;
+    │                              ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:128:51
+    │
+128 │       refunds += expected - expected * (elapsed > 1000 ? 1000 : elapsed) / 1000;
+    │                                                   ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCore.sol:434:9
+    │
+434 │     if (elapsed >= VESTING_PERIOD) return LOCKED_PER_TOKEN;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:89:64
+   │
+89 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("QUJD")), 1, 5);
+   │                                                                ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[low-level-calls]: Low-level calls should be avoided
+    ╭▸ test/SeaDropFunding.t.sol:213:7
+    │
+213 │       address(funding).call{ value: 100003 }(abi.encodeWithSignature("mint(uint256)", 1));
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ src/FundingCore.sol:456:5
+    │
+456 │     SafeTransferLib.forceSafeTransferETH(to, amount);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[missing-events-arithmetic]: `_approvedThrough` is changed without an event but is used in arithmetic
+    ╭▸ src/FundingCouncil.sol:252:37
+    │
+252 │     if (result == Outcome.Approved) _approvedThrough = cycle;
+    │                                     ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/FundingRecovery.sol:17:37
+   │
+17 │   IRecoveryFunding public immutable funding;
+   │                                     ━━━━━━━ help: consider using: `FUNDING`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:128:58
+    │
+128 │       refunds += expected - expected * (elapsed > 1000 ? 1000 : elapsed) / 1000;
+    │                                                          ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:128:76
+    │
+128 │       refunds += expected - expected * (elapsed > 1000 ? 1000 : elapsed) / 1000;
+    │                                                                            ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:524:25
+    │
+524 │     for (uint256 i; i < 3; i++) {
+    │                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:525:38
+    │
+525 │       uint256 id = (uint256(order) % 3 + i) % 3 + 1;
+    │                                      ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[low-level-calls]: Low-level calls should be avoided
+    ╭▸ test/SeaDropFunding.t.sol:215:35
+    │
+215 │       (bool directAllowlistMint,) = address(funding).call{ value: 100003 }(
+    │ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+216 │ ┃       abi.encodeWithSignature("allowlistMint(uint256,bytes32[])", 1, new bytes32[](0))
+217 │ ┃     );
+    │ ┗━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ src/FundingRecovery.sol:5:11
+  │
+5 │ interface IRecoveryFunding {
+  │           ━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:93:22
+   │
+93 │     funding = deploy(25, 100003, 333, 3000, 185 days, fee);
+   │                      ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[asm-keccak256]: use of inefficient hashing mechanism; consider using inline assembly
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:235:12
+    │
+235 │     return keccak256(abi.encode(wallet, allowlistParams()));
+    │            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/asm-keccak256
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:133:51
+    │
+133 │     assertEq(funding.ownerPaidAmount() + refunds, 300009);
+    │                                                   ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:139:35
+    │
+139 │     bytes memory page = new bytes(8192);
+    │                                   ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:141:57
+    │
+141 │     BytecodeSlice[] memory slices = new BytecodeSlice[](24);
+    │                                                         ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:145:34
+    │
+145 │     bytes memory all = new bytes(24 * 8192);
+    │                                  ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:136:24
+    │
+136 │     uint256 perToken = council.authorizeClaim(cycle);
+    │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:525:47
+    │
+525 │       uint256 id = (uint256(order) % 3 + i) % 3 + 1;
+    │                                               ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:536:22
+    │
+536 │     funding = deploy(25);
+    │                      ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:540:29
+    │
+540 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:240:9
+    │
+240 │     if (block.timestamp + MINT_PERIOD > type(uint48).max) revert InvalidSeaDropConfiguration();
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[low-level-calls]: Low-level calls should be avoided
+    ╭▸ test/SeaDropFunding.t.sol:220:20
+    │
+220 │     (bool paid,) = address(funding).call{ value: 1 }("");
+    │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/low-level-calls
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:145:39
+    │
+145 │     bytes memory all = new bytes(24 * 8192);
+    │                                       ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:150:34
+    │
+150 │     slices = new BytecodeSlice[](33);
+    │                                  ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:248:28
+    │
+248 │       drop.updateAllowList(AllowListData(root, new string[](0), ""));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `AllowListData({ merkleRoot: root, publicKeyURIs: new string[](0), allowListURI: "" })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:122:58
+    │
+122 │   function claimOwnerShare() external override onlyOwner nonReentrant {
+    │                                                          ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:541:20
+    │
+541 │     vm.deal(alice, 2400072);
+    │                    ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:93:26
+   │
+93 │     funding = deploy(25, 100003, 333, 3000, 185 days, fee);
+   │                          ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ src/FundingRecovery.sol:13:10
+   │
+13 │ contract FundingRecovery {
+   │          ━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:264:9
+    │
+264 │ ┏         PublicDrop(
+265 │ ┃           uint80(GROSS_MINT_PRICE),
+266 │ ┃           uint48(mintStartTime),
+267 │ ┃           uint48(mintStartTime + MINT_PERIOD),
+    ‡ ┃
+270 │ ┃           true
+271 │ ┃         )
+    │ ┗━━━━━━━━━┛ help: consider using named fields: `PublicDrop({ mintPrice: uint80(GROSS_MINT_PRICE), startTime: uint48(mintStartTime), endTime: uint48(mintStartTime + MINT_PERIOD), maxTotalMintableByWallet: uint16(MAX_PER_WALLET), feeBps: SEADROP_FEE_BPS, restrictFeeRecipients: true })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:151:51
+    │
+151 │     large.pointer = SSTORE2.write(abi.encode(File(33, slices)));
+    │                                                   ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:93:34
+   │
+93 │     funding = deploy(25, 100003, 333, 3000, 185 days, fee);
+   │                                  ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:543:29
+    │
+543 │     drop.mintPublic{ value: 2400072 }(address(funding), fee, address(0), 24);
+    │                             ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:160:21
+    │
+160 │     vm.warp(start + 250);
+    │                     ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:162:52
+    │
+162 │     uint256 quarter = funding.LOCKED_PER_TOKEN() * 250 / 1000;
+    │                                                    ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:162:58
+    │
+162 │     uint256 quarter = funding.LOCKED_PER_TOKEN() * 250 / 1000;
+    │                                                          ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:93:39
+   │
+93 │     funding = deploy(25, 100003, 333, 3000, 185 days, fee);
+   │                                       ━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ test/Security.t.sol:93:45
+   │
+93 │     funding = deploy(25, 100003, 333, 3000, 185 days, fee);
+   │                                             ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:543:74
+    │
+543 │     drop.mintPublic{ value: 2400072 }(address(funding), fee, address(0), 24);
+    │                                                                          ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:545:40
+    │
+545 │     assertEq(council.eligibleSupply(), 24);
+    │                                        ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:546:32
+    │
+546 │     assertEq(council.quorum(), 3);
+    │                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:560:43
+    │
+560 │     assertFalse(council.hasVotedReview(1, 3));
+    │                                           ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/SeaDropFunding.t.sol:15:10
+   │
+15 │ contract SeaDropHarness {
+   │          ━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:128:70
+    │
+128 │   function claimOwnerShareForCycle(uint256 cycle) external onlyOwner nonReentrant {
+    │                                                                      ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+warning[missing-events-access-control]: `_epoch` is changed without an event but is used for access control
+   ╭▸ src/FundingRecovery.sol:70:5
+   │
+70 │     _epoch = funding.ownershipEpoch();
+   │     ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:561:21
+    │
+561 │     vm.warp(start + 37 days - 1);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ test/SeaDropFunding.t.sol:93:10
+   │
+93 │ contract CallbackProbe {
+   │          ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:163:41
+    │
+163 │     assertEq(funding.ownerPaidAmount(), 3 * (funding.INITIAL_PAYOUT_PER_TOKEN() + quarter));
+    │                                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:168:21
+    │
+168 │     vm.warp(start + 1000);
+    │                     ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:173:50
+    │
+173 │     assertEq(funding.ownerPaidAmount() + refund, 300009);
+    │                                                  ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:180:93
+    │
+180 │     string memory json = string(Base64.decode(LibString.slice(renderer.tokenURI(17, label), 29)));
+    │                                                                                             ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:265:11
+    │
+265 │           uint80(GROSS_MINT_PRICE),
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint80' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:152:19
+    │
+152 │     uint256 net = 100003 - uint256(100003) * 333 / 10000;
+    │                   ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+    ╭▸ test/SeaDropFunding.t.sol:128:10
+    │
+128 │ contract SeaDropFundingTest is Test {
+    │          ━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:141:5
+    │
+141 │     emit OwnerShareClaimed(amount);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:564:21
+    │
+564 │     vm.warp(start + 37 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:572:34
+    │
+572 │     council.voteReview(2, tokens(4, 2), false);
+    │                                  ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:152:36
+    │
+152 │     uint256 net = 100003 - uint256(100003) * 333 / 10000;
+    │                                    ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:187:64
+    │
+187 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("QUJD")), 1, 5);
+    │                                                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:188:31
+    │
+188 │     for (uint256 word; word < 4; ++word) {
+    │                               ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:152:46
+    │
+152 │     uint256 net = 100003 - uint256(100003) * 333 / 10000;
+    │                                              ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:266:11
+    │
+266 │           uint48(mintStartTime),
+    │           ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint48' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[missing-events-access-control]: `_nominee` is changed without an event but is used for access control
+   ╭▸ src/FundingRecovery.sol:71:5
+   │
+71 │     _nominee = wallet;
+   │     ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:189:46
+    │
+189 │       bytes memory encoded = abi.encode(File(4, slices));
+    │                                              ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/FundingCard.t.sol:190:19
+    │
+190 │       if (word == 3) {
+    │                   ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:267:11
+    │
+267 │           uint48(mintStartTime + MINT_PERIOD),
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint48' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:157:9
+    │
+157 │     if (elapsed >= VESTING_PERIOD) return LOCKED_PER_TOKEN;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:174:5
+    │
+174 │     council.authorizeWindDown(msg.sender == owner());
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:182:5
+    │
+182 │ ┏     emit WindDownActivated(
+183 │ ┃       msg.sender, windDownBeneficiary, windDownOwnerReserve, escapePoolAtActivation
+184 │ ┃     );
+    │ ┗━━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:573:21
+    │
+573 │     vm.warp(start + 67 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:578:33
+    │
+578 │     vm.warp(council.reviewStart(3));
+    │                                 ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:580:24
+    │
+580 │     council.voteReview(3, tokens(2, 2), true);
+    │                        ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:582:24
+    │
+582 │     council.voteReview(3, tokens(4, 1), false);
+    │                        ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[missing-events-access-control]: `_nominee` is changed without an event but is used for access control
+   ╭▸ src/FundingRecovery.sol:82:5
+   │
+82 │     _nominee = address(0);
+   │     ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:152:52
+    │
+152 │     uint256 net = 100003 - uint256(100003) * 333 / 10000;
+    │                                                    ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:153:25
+    │
+153 │     for (uint256 i; i < 25; ++i) {
+    │                         ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:155:23
+    │
+155 │       vm.deal(holder, 100003);
+    │                       ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:165:37
+    │
+165 │     assertEq(funding.totalSupply(), 25);
+    │                                     ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:170:25
+    │
+170 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(probe));
+    │                         ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:170:33
+    │
+170 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(probe));
+    │                                 ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:170:38
+    │
+170 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(probe));
+    │                                      ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:170:44
+    │
+170 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(probe));
+    │                                            ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:173:29
+    │
+173 │     vm.deal(address(probe), 200006);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:179:42
+    │
+179 │     assertEq(funding.totalNetReceived(), 200006 - uint256(200006) * 333 / 10000);
+    │                                          ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:179:59
+    │
+179 │     assertEq(funding.totalNetReceived(), 200006 - uint256(200006) * 333 / 10000);
+    │                                                           ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/FundingCard.t.sol:22:17
+   │
+22 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("XQU")), 2, 4);
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: SSTORE2.write(bytes("XQU")), start: 2, end: 4 })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingRecovery.sol:106:26
+    │
+106 │     if (_readyAt == 0 || block.timestamp < _readyAt) revert RecoveryNotReady();
+    │                          ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:185:5
+    │
+185 │     emit EscapePoolOpened(escapePoolAtActivation, activeSupply());
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:582:34
+    │
+582 │     council.voteReview(3, tokens(4, 1), false);
+    │                                  ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:584:37
+    │
+584 │     funding.claimOwnerShareForCycle(3);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:585:36
+    │
+585 │     vm.warp(council.reviewDeadline(3));
+    │                                    ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:586:37
+    │
+586 │     funding.claimOwnerShareForCycle(3);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:593:21
+    │
+593 │     vm.warp(start + 67 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:596:35
+    │
+596 │     uint256 second = locked * 2 / 6 - locked / 6;
+    │                                   ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:596:48
+    │
+596 │     uint256 second = locked * 2 / 6 - locked / 6;
+    │                                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:599:12
+    │
+599 │     review(3, true);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:601:37
+    │
+601 │     funding.claimOwnerShareForCycle(4);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:602:31
+    │
+602 │     uint256 fourth = locked * 4 / 6 - locked * 3 / 6;
+    │                               ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:602:35
+    │
+602 │     uint256 fourth = locked * 4 / 6 - locked * 3 / 6;
+    │                                   ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:602:48
+    │
+602 │     uint256 fourth = locked * 4 / 6 - locked * 3 / 6;
+    │                                                ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:602:52
+    │
+602 │     uint256 fourth = locked * 4 / 6 - locked * 3 / 6;
+    │                                                    ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:605:57
+    │
+605 │     assertEq(funding.lastPaidVestedPerToken(), locked * 4 / 6);
+    │                                                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:605:61
+    │
+605 │     assertEq(funding.lastPaidVestedPerToken(), locked * 4 / 6);
+    │                                                             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:607:37
+    │
+607 │     funding.claimOwnerShareForCycle(4);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:608:57
+    │
+608 │     assertEq(funding.lastPaidVestedPerToken(), locked * 4 / 6);
+    │                                                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/FundingCard.t.sol:23:17
+   │
+23 │     slices[1] = BytecodeSlice(SSTORE2.write(bytes("JD!")), 1, 3);
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: SSTORE2.write(bytes("JD!")), start: 1, end: 3 })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:268:11
+    │
+268 │           uint16(MAX_PER_WALLET),
+    │           ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ test/SeaDropFunding.t.sol:45:13
+   │
+45 │     require(block.timestamp >= p.startTime && block.timestamp <= p.endTime && p.startTime != 0);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ test/SeaDropFunding.t.sol:45:47
+   │
+45 │     require(block.timestamp >= p.startTime && block.timestamp <= p.endTime && p.startTime != 0);
+   │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ test/SeaDropFunding.t.sol:60:13
+   │
+60 │     require(block.timestamp >= p.startTime && block.timestamp <= p.endTime);
+   │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+   ╭▸ test/SeaDropFunding.t.sol:60:47
+   │
+60 │     require(block.timestamp >= p.startTime && block.timestamp <= p.endTime);
+   │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+   ╭▸ test/SeaDropFunding.t.sol:85:22
+   │
+85 │       (bool sent,) = fee.call{ value: cut }("");
+   │                      ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+   ╭▸ test/SeaDropFunding.t.sol:88:20
+   │
+88 │     (bool paid,) = payout[token].call{ value: msg.value - cut - shortfall }("");
+   │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[locked-ether]: contract can receive ETH but has no mechanism to send it out
+   ╭▸ test/SeaDropFunding.t.sol:93:10
+   │
+93 │ contract CallbackProbe {
+   │          ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/locked-ether
+
+warning[missing-zero-check]: address parameter is used in a state write or value transfer without a zero-address check
+    ╭▸ test/SeaDropFunding.t.sol:103:28
+    │
+103 │   function setRedirectDrop(address drop) external {
+    │                            ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-zero-check
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:142:23
+    │
+142 │     funding = release(100003, 333, fee, 3);
+    │                       ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:142:31
+    │
+142 │     funding = release(100003, 333, fee, 3);
+    │                               ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:142:41
+    │
+142 │     funding = release(100003, 333, fee, 3);
+    │                                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:143:20
+    │
+143 │     vm.deal(alice, 100 ether);
+    │                    ━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:155:7
+    │
+155 │       1000,
+    │       ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:180:10
+    │
+180 │     mint(3);
+    │          ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:182:35
+    │
+182 │     uint256 net = gross - gross * 333 / 10000;
+    │                                   ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:182:41
+    │
+182 │     uint256 net = gross - gross * 333 / 10000;
+    │                                         ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:186:47
+    │
+186 │     assertEq(funding.roundingSurplus(), net - 3 * funding.MINT_PRICE());
+    │                                               ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:190:34
+    │
+190 │       funding.ownerPaidAmount(), 3 * funding.INITIAL_PAYOUT_PER_TOKEN() + funding.roundingSurplus()
+    │                                  ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:197:42
+    │
+197 │     vm.warp(funding.vestingStartTime() + 1000);
+    │                                          ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:213:37
+    │
+213 │       address(funding).call{ value: 100003 }(abi.encodeWithSignature("mint(uint256)", 1));
+    │                                     ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:215:65
+    │
+215 │     (bool directAllowlistMint,) = address(funding).call{ value: 100003 }(
+    │                                                                 ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:225:29
+    │
+225 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:236:30
+    │
+236 │     drop.wrongPayout{ value: 100003 }(address(funding), fee, alice, 1, 333);
+    │                              ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:236:72
+    │
+236 │     drop.wrongPayout{ value: 100003 }(address(funding), fee, alice, 1, 333);
+    │                                                                        ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:253:32
+    │
+253 │     drop.mintAllowList{ value: 100003 }(address(funding), fee, address(0), 1, params, proof);
+    │                                ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:262:29
+    │
+262 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:265:39
+    │
+265 │     assertEq(funding.mintedBy(alice), 3);
+    │                                       ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:270:23
+    │
+270 │     funding = release(100003, 333, address(probe), 1);
+    │                       ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:270:31
+    │
+270 │     funding = release(100003, 333, address(probe), 1);
+    │                               ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:273:29
+    │
+273 │     drop.mintPublic{ value: 100003 }(address(funding), address(probe), address(probe), 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:291:29
+    │
+291 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(probe), 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:325:37
+    │
+325 │     uint256 price = bound(rawPrice, 10000, 1e20);
+    │                                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/SeaDropFunding.t.sol:325:44
+    │
+325 │     uint256 price = bound(rawPrice, 10000, 1e20);
+    │                                            ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/SeaDropFunding.t.sol:138:17
+    │
+138 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("QUJD")), 1, 5);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: SSTORE2.write(bytes("QUJD")), start: 1, end: 5 })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/SeaDropFunding.t.sol:140:48
+    │
+140 │       CardFiles.Asset(SSTORE2.write(abi.encode(File(4, slices))), keccak256(bytes("QUJD")));
+    │                                                ━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: 4, slices: slices })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:175:5
+    │
+175 │     drop.mintPublic{ value: value }(address(funding), fee, address(0), q);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/FundingAllowlist.sol:18:21
+   │
+18 │     for (uint256 i; i < size; ++i) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/FundingAllowlist.sol:22:23
+   │
+22 │       for (uint256 i; i < size; i += 2) {
+   │                       ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[encode-packed-collision]: `abi.encodePacked()` called with multiple dynamic type arguments; hash collisions possible
+   ╭▸ src/FundingCardRenderer.sol:39:25
+   │
+39 │       bytes memory html = abi.encodePacked(
+   │ ┏━━━━━━━━━━━━━━━━━━━━━━━━━┛
+40 │ ┃       Player.PART0,
+41 │ ┃       poster,
+42 │ ┃       Player.PART1,
+   ‡ ┃
+46 │ ┃       Player.PART3
+47 │ ┃     );
+   │ ┗━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/encode-packed-collision
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/FundingRecovery.sol:110:5
+    │
+110 │     emit RecoveryExecuted(previous, msg.sender);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:179:69
+    │
+179 │     assertEq(funding.totalNetReceived(), 200006 - uint256(200006) * 333 / 10000);
+    │                                                                     ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:179:75
+    │
+179 │     assertEq(funding.totalNetReceived(), 200006 - uint256(200006) * 333 / 10000);
+    │                                                                           ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:186:25
+    │
+186 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(rejecting));
+    │                         ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:186:33
+    │
+186 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(rejecting));
+    │                                 ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:282:27
+    │
+282 │     if (vestingStarted || block.timestamp > mintStartTime + MINT_PERIOD) revert MintPeriodEnded();
+    │                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:213:7
+    │
+213 │       address(funding).call{ value: 100003 }(abi.encodeWithSignature("mint(uint256)", 1));
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:608:61
+    │
+608 │     assertEq(funding.lastPaidVestedPerToken(), locked * 4 / 6);
+    │                                                             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:186:38
+    │
+186 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(rejecting));
+    │                                      ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:186:44
+    │
+186 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(rejecting));
+    │                                            ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:215:35
+    │
+215 │       (bool directAllowlistMint,) = address(funding).call{ value: 100003 }(
+    │ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+216 │ ┃       abi.encodeWithSignature("allowlistMint(uint256,bytes32[])", 1, new bytes32[](0))
+217 │ ┃     );
+    │ ┗━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:609:12
+    │
+609 │     review(6, true);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:206:33
+    │
+206 │     vm.deal(address(rejecting), 100003);
+    │                                 ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:220:20
+    │
+220 │     (bool paid,) = address(funding).call{ value: 1 }("");
+    │                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:225:5
+    │
+225 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:208:42
+    │
+208 │     assertEq(address(rejecting).balance, 100003);
+    │                                          ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:217:29
+    │
+217 │     drop.mintPublic{ value: 100003 }(address(funding), fee, alice, 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:220:29
+    │
+220 │     drop.mintPublic{ value: 100003 }(address(funding), address(123), alice, 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:221:29
+    │
+221 │     drop.mintPublic{ value: 100003 }(address(funding), fee, alice, 1);
+    │                             ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:228:46
+    │
+228 │     address[] memory wallets = new address[](3);
+    │                                              ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:241:32
+    │
+241 │     drop.mintAllowList{ value: 100003 }(address(funding), fee, address(0), 1, params, proof);
+    │                                ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:245:32
+    │
+245 │     drop.mintAllowList{ value: 100003 }(address(funding), fee, address(0), 1, params, proof);
+    │                                ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:273:35
+    │
+273 │     assertEq(funding.maxSupply(), 25);
+    │                                   ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:308:35
+    │
+308 │     vm.deal(address(ownerWallet), 100003);
+    │                                   ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:312:44
+    │
+312 │     assertEq(address(ownerWallet).balance, 100003);
+    │                                            ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:317:25
+    │
+317 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(ownerWallet));
+    │                         ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:317:33
+    │
+317 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(ownerWallet));
+    │                                 ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/FundingCard.t.sol:25:32
+   │
+25 │       SSTORE2.write(abi.encode(File(contents.length, slices))), keccak256(contents)
+   │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: contents.length, slices: slices })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/SeaDropFunding.t.sol:230:45
+    │
+230 │     funding.updatePublicDrop(address(drop), PublicDrop(0, 0, 0, 0, 0, false));
+    │                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `PublicDrop({ mintPrice: 0, startTime: 0, endTime: 0, maxTotalMintableByWallet: 0, feeBps: 0, restrictFeeRecipients: false })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:622:31
+    │
+622 │     vm.warp(block.timestamp + 72 hours);
+    │                               ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:633:22
+    │
+633 │     funding = deploy(25);
+    │                      ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:637:20
+    │
+637 │     vm.deal(alice, 2500075);
+    │                    ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:639:29
+    │
+639 │     drop.mintPublic{ value: 2500075 }(address(funding), fee, address(0), 25);
+    │                             ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:639:74
+    │
+639 │     drop.mintPublic{ value: 2500075 }(address(funding), fee, address(0), 25);
+    │                                                                          ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:317:38
+    │
+317 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(ownerWallet));
+    │                                      ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[encode-packed-collision]: `abi.encodePacked()` called with multiple dynamic type arguments; hash collisions possible
+   ╭▸ src/FundingCardRenderer.sol:48:25
+   │
+48 │       bytes memory json = abi.encodePacked(
+   │ ┏━━━━━━━━━━━━━━━━━━━━━━━━━┛
+49 │ ┃       '{"name":"',
+50 │ ┃       LibString.escapeJSON(collectionName),
+51 │ ┃       " #",
+   ‡ ┃
+57 │ ┃       '"}'
+58 │ ┃     );
+   │ ┗━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/encode-packed-collision
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:644:37
+    │
+644 │     council.voteReview(1, tokens(1, 3), false);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:648:21
+    │
+648 │     vm.warp(start + 67 days - 1);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+   ╭▸ test/FundingCard.t.sol:38:5
+   │
+38 │     funding.mint{ value: 300009 }(3);
+   │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:317:44
+    │
+317 │     funding = deploy(2, 100003, 333, 3000, 180 days, address(ownerWallet));
+    │                                            ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:330:27
+    │
+330 │     uint256 cut = uint256(100003) * 333 / 10000;
+    │                           ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:330:37
+    │
+330 │     uint256 cut = uint256(100003) * 333 / 10000;
+    │                                     ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:330:43
+    │
+330 │     uint256 cut = uint256(100003) * 333 / 10000;
+    │                                           ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[unused-return]: Return value of an external call is not used
+   ╭▸ test/FundingCard.t.sol:38:5
+   │
+38 │     funding.mint{ value: 300009 }(3);
+   │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:236:5
+    │
+236 │     drop.wrongPayout{ value: 100003 }(address(funding), fee, alice, 1, 333);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:253:5
+    │
+253 │     drop.mintAllowList{ value: 100003 }(address(funding), fee, address(0), 1, params, proof);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:262:5
+    │
+262 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ test/FundingCard.t.sol:42:21
+   │
+42 │     vm.expectRevert(bytes4(keccak256("TokenDoesNotExist()")));
+   │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes4' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unused-return]: Return value of an external call is not used
+   ╭▸ test/FundingCard.t.sol:43:5
+   │
+43 │     funding.tokenURI(0);
+   │     ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+   ╭▸ test/FundingCard.t.sol:53:21
+   │
+53 │     vm.expectRevert(bytes4(keccak256("TokenDoesNotExist()")));
+   │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ├ note: consider disabling this lint if you're certain the cast is safe
+   │       
+   │       // casting to 'bytes4' is safe because [explain why]
+   │       // forge-lint: disable-next-line(unsafe-typecast)
+   │       
+   │       
+   ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unused-return]: Return value of an external call is not used
+   ╭▸ test/FundingCard.t.sol:54:5
+   │
+54 │     funding.tokenURI(1);
+   │     ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:273:5
+    │
+273 │     drop.mintPublic{ value: 100003 }(address(funding), address(probe), address(probe), 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/SeaDropFunding.t.sol:291:5
+    │
+291 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(probe), 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ test/FundingCard.t.sol:81:21
+   │
+81 │     for (uint256 i; i < 5; i++) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+   ╭▸ test/FundingCard.t.sol:83:19
+   │
+83 │       if (i == 4) vm.etch(chunk, hex"ff51554a44");
+   │                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+   ╭▸ test/FundingCard.t.sol:86:7
+   │
+86 │       vm.expectRevert(CardFiles.InvalidAsset.selector);
+   │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+   ╭▸ test/FundingCard.t.sol:87:7
+   │
+87 │       new FundingCardRenderer(invalid, asset, asset);
+   │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/FundingCard.t.sol:82:19
+   │
+82 │       slices[0] = BytecodeSlice(chunk, uint32(i == 0 ? 0 : 1), uint32(i == 1 ? 6 : i == 2 ? 1 : 5));
+   │                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: chunk, start: uint32(i == 0 ? 0 : 1), end: uint32(i == 1 ? 6 : i == 2 ? 1 : 5) })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/FundingCard.t.sol:85:50
+   │
+85 │         CardFiles.Asset(SSTORE2.write(abi.encode(File(i == 3 ? 7 : 4, slices))), asset.hash);
+   │                                                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: i == 3 ? 7 : 4, slices: slices })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/FundingCard.t.sol:128:7
+    │
+128 │       refunds += expected - expected * (elapsed > 1000 ? 1000 : elapsed) / 1000;
+    │       ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/FundingCard.t.sol:123:21
+    │
+123 │     for (uint256 i; i < 3; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/SeaDropFunding.t.sol:332:23
+    │
+332 │       for (uint256 i; i < q; i++) {
+    │                       ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/FundingCard.t.sol:124:7
+    │
+124 │       vm.warp(start + (i == 0 ? t1 : t2));
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:651:21
+    │
+651 │     vm.warp(start + 67 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:332:40
+    │
+332 │     assertEq(address(funding).balance, 100003 - cut);
+    │                                        ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:341:30
+    │
+341 │     vm.deal(address(holder), 100003);
+    │                              ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/FundingCard.t.sol:126:26
+    │
+126 │       uint256 expected = funding.LOCKED_PER_TOKEN(); // per-token principal
+    │                          ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/SeaDropFunding.t.sol:173:25
+    │
+173 │     uint256 value = q * funding.GROSS_MINT_PRICE();
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:365:30
+    │
+365 │     vm.deal(address(holder), 100003);
+    │                              ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/FundingCard.t.sol:129:7
+    │
+129 │       vm.prank(alice);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/FundingCard.t.sol:130:7
+    │
+130 │       funding.burn(id);
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:384:17
+    │
+384 │     mint(alice, 25);
+    │                 ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:399:15
+    │
+399 │     deploy(1, 100003, 333, 3000, type(uint256).max, fee);
+    │               ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:399:23
+    │
+399 │     deploy(1, 100003, 333, 3000, type(uint256).max, fee);
+    │                       ━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:399:28
+    │
+399 │     deploy(1, 100003, 333, 3000, type(uint256).max, fee);
+    │                            ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:415:31
+    │
+415 │     funding = deploy(1, 1, 0, 9999, 185 days, fee);
+    │                               ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:415:37
+    │
+415 │     funding = deploy(1, 1, 0, 9999, 185 days, fee);
+    │                                     ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:424:38
+    │
+424 │     for (uint256 cycle = 1; cycle <= 7; ++cycle) {
+    │                                      ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:425:44
+    │
+425 │       vm.warp(council.reviewStart(cycle) + 7 days);
+    │                                            ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/SeaDropFunding.t.sol:174:5
+    │
+174 │     vm.prank(alice);
+    │     ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/SeaDropFunding.t.sol:175:5
+    │
+175 │     drop.mintPublic{ value: value }(address(funding), fee, address(0), q);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:652:56
+    │
+652 │     uint256 installment = funding.LOCKED_PER_TOKEN() / 3 - funding.LOCKED_PER_TOKEN() / 6;
+    │                                                        ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/FundingCard.t.sol:142:21
+    │
+142 │     for (uint256 n; n < slices.length; n++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:483:66
+    │
+483 │     assertEq(funding.windDownOwnerReserve(), type(uint256).max / 20);
+    │                                                                  ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:484:79
+    │
+484 │     assertEq(funding.totalUnvested(), type(uint256).max - type(uint256).max / 20);
+    │                                                                               ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:652:89
+    │
+652 │     uint256 installment = funding.LOCKED_PER_TOKEN() / 3 - funding.LOCKED_PER_TOKEN() / 6;
+    │                                                                                         ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:653:57
+    │
+653 │     assertEq(funding.pendingOwnerShare(), installment * 25);
+    │                                                         ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:657:65
+    │
+657 │     assertEq(funding.ownerPaidAmount(), upfront + installment * 25);
+    │                                                                 ━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:663:33
+    │
+663 │     vm.warp(council.reviewStart(3));
+    │                                 ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:665:24
+    │
+665 │     council.voteReview(3, tokens(1, 3), true);
+    │                        ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/FundingCard.t.sol:143:19
+    │
+143 │       slices[n] = BytecodeSlice(chunk, 1, 8193);
+    │                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: chunk, start: 1, end: 8193 })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/SeaDropFunding.t.sol:343:7
+    │
+343 │       vm.prank(alice);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:665:37
+    │
+665 │     council.voteReview(3, tokens(1, 3), true);
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:666:36
+    │
+666 │     vm.warp(council.reviewDeadline(3));
+    │                                    ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/SeaDropFunding.t.sol:344:7
+    │
+344 │       funding.burn(i);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:328:7
+    │
+328 │       drop.updatePublicDrop(disabledDrop);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:675:21
+    │
+675 │     vm.warp(start + 67 days);
+    │                     ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:682:12
+    │
+682 │     review(3, true);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:491:37
+    │
+491 │     uint256 price = bound(rawPrice, 10000, type(uint80).max);
+    │                                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:332:7
+    │
+332 │       drop.updateAllowList(AllowListData(bytes32(0), new string[](0), ""));
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/FundingCard.t.sol:147:48
+    │
+147 │       CardFiles.Asset(SSTORE2.write(abi.encode(File(all.length, slices))), keccak256(all));
+    │                                                ━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: all.length, slices: slices })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/GovernedFunding.t.sol:685:12
+    │
+685 │     review(6, true);
+    │            ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/SeaDropFunding.t.sol:326:19
+    │
+326 │     uint16 fees = uint16(bound(rawFee, 0, 9999));
+    │                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:321:43
+    │
+321 │   function closeMint() external onlyOwner nonReentrant {
+    │                                           ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/FundingCard.t.sol:151:46
+    │
+151 │     large.pointer = SSTORE2.write(abi.encode(File(33, slices)));
+    │                                              ━━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: 33, slices: slices })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:332:28
+    │
+332 │       drop.updateAllowList(AllowListData(bytes32(0), new string[](0), ""));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `AllowListData({ merkleRoot: bytes32(0), publicKeyURIs: new string[](0), allowListURI: "" })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:492:43
+    │
+492 │     uint16 fees = uint16(bound(rawFee, 0, 9999));
+    │                                           ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:493:44
+    │
+493 │     uint256 upfront = bound(rawUpfront, 0, 9999);
+    │                                            ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:494:47
+    │
+494 │     funding = deploy(1, price, fees, upfront, 185 days, fee);
+    │                                               ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:502:13
+    │
+502 │     uint256[8] memory outcomes;
+    │             ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:503:10
+    │
+503 │     bool[8] memory settled;
+    │          ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:505:38
+    │
+505 │     for (uint256 cycle = 1; cycle <= 7; ++cycle) {
+    │                                      ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:506:49
+    │
+506 │       outcomes[cycle] = (seed >> (cycle * 2)) % 3; // 0 silent, 1 approved, 2 rejected
+    │                                                 ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:512:44
+    │
+512 │       vm.warp(council.reviewStart(cycle) + 7 days);
+    │                                            ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/FundingCard.t.sol:188:24
+    │
+188 │     for (uint256 word; word < 4; ++word) {
+    │                        ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:515:37
+    │
+515 │       for (uint256 action; action < 5; ++action) {
+    │                                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:525:33
+    │
+525 │               uint256 end = i * 30 days;
+    │                                 ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:526:25
+    │
+526 │               if (end > 185 days) end = 185 days;
+    │                         ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:526:41
+    │
+526 │               if (end > 185 days) end = 185 days;
+    │                                         ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:527:42
+    │
+527 │               expected += locked * end / 185 days - locked * ((i - 1) * 30 days) / 185 days;
+    │                                          ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:527:73
+    │
+527 │               expected += locked * end / 185 days - locked * ((i - 1) * 30 days) / 185 days;
+    │                                                                         ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ test/Security.t.sol:527:84
+    │
+527 │               expected += locked * end / 185 days - locked * ((i - 1) * 30 days) / 185 days;
+    │                                                                                    ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/FundingCard.t.sol:198:7
+    │
+198 │       vm.expectRevert(CardFiles.InvalidAsset.selector);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/FundingCard.t.sol:199:7
+    │
+199 │       new FundingCardRenderer(malformed, asset, asset);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/FundingCard.t.sol:187:17
+    │
+187 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("QUJD")), 1, 5);
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: SSTORE2.write(bytes("QUJD")), start: 1, end: 5 })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/FundingCard.t.sol:189:41
+    │
+189 │       bytes memory encoded = abi.encode(File(4, slices));
+    │                                         ━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: 4, slices: slices })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[unused-return]: Return value of an external call is not used
+    ╭▸ test/FundingCard.t.sol:209:5
+    │
+209 │     funding.tokenURI(1);
+    │     ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/Security.t.sol:89:17
+   │
+89 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("QUJD")), 1, 5);
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: SSTORE2.write(bytes("QUJD")), start: 1, end: 5 })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/Security.t.sol:91:48
+   │
+91 │       CardFiles.Asset(SSTORE2.write(abi.encode(File(4, slices))), keccak256(bytes("QUJD")));
+   │                                                ━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: 4, slices: slices })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+   ╭▸ test/GovernedFunding.t.sol:60:5
+   │
+60 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+   │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/GovernedFunding.t.sol:50:17
+   │
+50 │     slices[0] = BytecodeSlice(SSTORE2.write(bytes("QUJD")), 1, 5);
+   │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `BytecodeSlice({ pointer: SSTORE2.write(bytes("QUJD")), start: 1, end: 5 })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+note[named-struct-fields]: prefer initializing structs with named fields
+   ╭▸ test/GovernedFunding.t.sol:52:48
+   │
+52 │       CardFiles.Asset(SSTORE2.write(abi.encode(File(4, slices))), keccak256(bytes("QUJD")));
+   │                                                ━━━━━━━━━━━━━━━ help: consider using named fields: `File({ size: 4, slices: slices })`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ test/GovernedFunding.t.sol:71:21
+   │
+71 │     for (uint256 i; i < count; i++) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/GovernedFunding.t.sol:116:5
+    │
+116 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:131:5
+    │
+131 │     drop.mintPublic{ value: value }(address(funding), recipient, address(0), quantity);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:140:5
+    │
+140 │     drop.mintPublic{ value: value }(address(funding), recipient, address(0), quantity);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[unused-return]: Return value of an external call is not used
+    ╭▸ test/GovernedFunding.t.sol:133:51
+    │
+133 │     (, uint48 publicStart, uint48 publicEnd,,,) = drop.sales(address(funding));
+    │                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/Security.t.sol:153:21
+    │
+153 │     for (uint256 i; i < 25; ++i) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:155:7
+    │
+155 │       vm.deal(holder, 100003);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:128:21
+    │
+128 │     uint256 value = funding.GROSS_MINT_PRICE() * quantity;
+    │                     ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:129:25
+    │
+129 │     address recipient = funding.FEE_RECIPIENT();
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:130:5
+    │
+130 │     vm.prank(minter);
+    │     ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:131:5
+    │
+131 │     drop.mintPublic{ value: value }(address(funding), recipient, address(0), quantity);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:157:16
+    │
+157 │       assertEq(funding.ownerOf(i + 1), holder);
+    │                ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:158:16
+    │
+158 │       assertEq(funding.pendingNetProceeds(), 0);
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:159:16
+    │
+159 │       assertEq(funding.totalNetReceived(), net * (i + 1));
+    │                ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/Security.t.sol:154:32
+    │
+154 │       address holder = address(uint160(1000 + i));
+    │                                ━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint160' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:217:5
+    │
+217 │     drop.mintPublic{ value: 100003 }(address(funding), fee, alice, 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:220:5
+    │
+220 │     drop.mintPublic{ value: 100003 }(address(funding), address(123), alice, 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:221:5
+    │
+221 │     drop.mintPublic{ value: 100003 }(address(funding), fee, alice, 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/GovernedFunding.t.sol:262:5
+    │
+262 │     drop.mintPublic{ value: 300009 }(address(funding), fee, address(0), 3);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:241:5
+    │
+241 │     drop.mintAllowList{ value: 100003 }(address(funding), fee, address(0), 1, params, proof);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/Security.t.sol:245:5
+    │
+245 │     drop.mintAllowList{ value: 100003 }(address(funding), fee, address(0), 1, params, proof);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ test/Security.t.sol:262:44
+    │
+262 │     funding.updateAllowList(address(drop), AllowListData(bytes32(uint256(1)), new string[](0), ""));
+    │                                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `AllowListData({ merkleRoot: bytes32(uint256(1)), publicKeyURIs: new string[](0), allowListURI: "" })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:386:7
+    │
+386 │       vm.prank(alice);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:387:7
+    │
+387 │       funding.burn(id);
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/GovernedFunding.t.sol:412:7
+    │
+412 │       refunded += alice.balance - before;
+    │       ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/GovernedFunding.t.sol:407:21
+    │
+407 │     for (uint256 i; i < 3; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:410:7
+    │
+410 │       vm.prank(alice);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:411:7
+    │
+411 │       funding.burn(id);
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:425:15
+    │
+425 │       vm.warp(council.reviewStart(cycle) + 7 days);
+    │               ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:425:7
+    │
+425 │       vm.warp(council.reviewStart(cycle) + 7 days);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:426:7
+    │
+426 │       funding.claimOwnerShareForCycle(cycle);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:427:7
+    │
+427 │       funding.claimOwnerShareForCycle(cycle);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/GovernedFunding.t.sol:478:7
+    │
+478 │       refunds += quoted;
+    │       ━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:474:24
+    │
+474 │       uint256 quoted = funding.getRemainingLockedEth(id);
+    │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:475:7
+    │
+475 │       vm.prank(alice);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:476:7
+    │
+476 │       funding.burn(id);
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[unused-return]: Return value of an external call is not used
+    ╭▸ test/GovernedFunding.t.sol:485:5
+    │
+485 │     funding.tokenURI(1);
+    │     ━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unused-return
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/Security.t.sol:515:28
+    │
+515 │       for (uint256 action; action < 5; ++action) {
+    │                            ━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/Security.t.sol:527:15
+    │
+527 │               expected += locked * end / 185 days - locked * ((i - 1) * 30 days) / 185 days;
+    │               ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:508:17
+    │
+508 │         vm.warp(council.reviewStart(cycle));
+    │                 ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/GovernedFunding.t.sol:529:7
+    │
+529 │       refunded += alice.balance - before;
+    │       ━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ test/GovernedFunding.t.sol:524:21
+    │
+524 │     for (uint256 i; i < 3; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:508:9
+    │
+508 │         vm.warp(council.reviewStart(cycle));
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:527:7
+    │
+527 │       vm.prank(alice);
+    │       ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/GovernedFunding.t.sol:528:7
+    │
+528 │       funding.burn(id);
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:509:9
+    │
+509 │         vm.prank(alice);
+    │         ━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:144:14
+    │
+144 │     result = new uint256[](1);
+    │              ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:510:9
+    │
+510 │         council.voteReview(cycle, ids(1), outcomes[cycle] == 1);
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:512:15
+    │
+512 │       vm.warp(council.reviewStart(cycle) + 7 days);
+    │               ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:512:7
+    │
+512 │       vm.warp(council.reviewStart(cycle) + 7 days);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:519:11
+    │
+519 │           vm.expectRevert(FundingCouncil.ReviewNotApproved.selector);
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:520:11
+    │
+520 │           funding.claimOwnerShareForCycle(chosen);
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:531:11
+    │
+531 │           funding.claimOwnerShareForCycle(chosen);
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:533:18
+    │
+533 │         assertEq(funding.lastPaidVestedPerToken(), expected);
+    │                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/GovernedFunding.t.sol:540:5
+    │
+540 │     drop.mintPublic{ value: 100003 }(address(funding), fee, address(0), 1);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/GovernedFunding.t.sol:543:5
+    │
+543 │     drop.mintPublic{ value: 2400072 }(address(funding), fee, address(0), 24);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:534:18
+    │
+534 │         assertEq(funding.ownerPaidAmount() + address(funding).balance, funding.totalNetReceived());
+    │                  ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ test/Security.t.sol:534:72
+    │
+534 │         assertEq(funding.ownerPaidAmount() + address(funding).balance, funding.totalNetReceived());
+    │                                                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ test/Security.t.sol:492:19
+    │
+492 │     uint16 fees = uint16(bound(rawFee, 0, 9999));
+    │                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ test/GovernedFunding.t.sol:639:5
+    │
+639 │     drop.mintPublic{ value: 2500075 }(address(funding), fee, address(0), 25);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[missing-events-arithmetic]: `paidThroughCycle` is changed without an event but is used in arithmetic
+    ╭▸ src/FundingCouncil.sol:279:7
+    │
+279 │       paidThroughCycle = through;
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/FundingCouncil.sol:114:3
+    │
+114 │ ┏   modifier onlyFunding() {
+115 │ ┃     if (msg.sender != address(funding)) revert Unauthorized();
+116 │ ┃     _;
+117 │ ┃   }
+    │ ┗━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+114 ±   modifier onlyFunding() {
+115 +     _onlyFunding();
+116 +     _;
+117 +   }
+118 + 
+119 +   function _onlyFunding() internal {
+120 +     if (msg.sender != address(funding)) revert Unauthorized();
+121 +   }
+    ╰╴
+
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/FundingCouncil.sol:119:3
+    │
+119 │ ┏   modifier live() {
+120 │ ┃     if (escapeActivated) revert Escaped();
+121 │ ┃     _;
+122 │ ┃   }
+    │ ┗━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+119 ±   modifier live() {
+120 +     _live();
+121 +     _;
+122 +   }
+123 + 
+124 +   function _live() internal {
+125 +     if (escapeActivated) revert Escaped();
+126 +   }
+    ╰╴
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:152:29
+    │
+152 │     return deadline != 0 && block.timestamp >= deadline;
+    │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:162:25
+    │
+162 │       if (!ownerCall || block.timestamp < lastDecision + WIND_DOWN_DELAY) revert InvalidPeriod();
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/FundingCouncil.sol:200:21
+    │
+200 │     for (uint256 i; i < tokenIds.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:194:9
+    │
+194 │     if (block.timestamp < start || block.timestamp >= start + VOTING) revert VotingClosed();
+    │         ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:194:36
+    │
+194 │     if (block.timestamp < start || block.timestamp >= start + VOTING) revert VotingClosed();
+    │                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:209:9
+    │
+209 │     if (block.timestamp < start + VOTING) return Outcome.Unresolved;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:217:12
+    │
+217 │         && block.timestamp >= start + SILENCE_DELAY
+    │            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:246:36
+    │
+246 │     if (cycle == _recordedCycle || block.timestamp < reviewDeadline(cycle)) return;
+    │                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[costly-loop]: storage write inside a loop
+    ╭▸ src/FundingCouncil.sol:276:9
+    │
+276 │         _silencePaidTree[i] += payableAmount;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/costly-loop
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:296:11
+    │
+296 │       if (elapsed < CYCLE + SILENCE_DELAY) return (approved, 0, false);
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:356:11
+    │
+356 │       if (block.timestamp < previous.startedAt + VOTING || _escapeApproved(previous)) {
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/FundingCouncil.sol:375:21
+    │
+375 │     for (uint256 i; i < tokenIds.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:370:47
+    │
+370 │     if (round == 0 || round != escapeRound || block.timestamp >= ballot.startedAt + VOTING) {
+    │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:383:47
+    │
+383 │     if (round == 0 || round != escapeRound || block.timestamp < ballot.startedAt + VOTING) {
+    │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/FundingCouncil.sol:392:5
+    │
+392 │     emit EscapeActivated(round, block.timestamp);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/FundingCouncil.sol:409:21
+    │
+409 │     for (uint256 i; i < tokenIds.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/FundingCouncil.sol:421:40
+    │
+421 │     if (msg.sender == excludedOwner || funding.ownerOf(tokenId) != msg.sender) {
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/FundingCouncil.sol:422:7
+    │
+422 │       revert Unauthorized();
+    │       ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/FundingCouncil.sol:412:34
+    │
+412 │       if (ballot.voted[tokenId]) revert AlreadyVoted();
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+note[pragma-inconsistent]: 3 different Solidity pragma version requirements are used: ^0.8.13, ^0.8.21, ^0.8.24
+  ╭▸ script/Counter.s.sol:2:1
+  │
+2 │ pragma solidity ^0.8.13;
+  │ ━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/pragma-inconsistent
+
+note[missing-inheritance]: contract `IndustrialImaginationGovernedFunding` implements interface `ICouncilFunding`'s external API but does not explicitly inherit from it
+   ╭▸ src/IndustrialImaginationGovernedFunding.sol:10:10
+   │
+10 │ contract IndustrialImaginationGovernedFunding is IndustrialImaginationSeaDropFunding {
+   │          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-inheritance
+
+note[missing-inheritance]: contract `IndustrialImaginationGovernedFunding` implements interface `IRecoveryFunding`'s external API but does not explicitly inherit from it
+   ╭▸ src/IndustrialImaginationGovernedFunding.sol:10:10
+   │
+10 │ contract IndustrialImaginationGovernedFunding is IndustrialImaginationSeaDropFunding {
+   │          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-inheritance
+
+note[missing-inheritance]: contract `CallbackProbe` implements interface `ERC721A__IERC721Receiver`'s external API but does not explicitly inherit from it
+   ╭▸ test/SeaDropFunding.t.sol:93:10
+   │
+93 │ contract CallbackProbe {
+   │          ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-inheritance
+
+note[missing-inheritance]: contract `GovernedFundingTest` implements interface `ERC721A__IERC721Receiver`'s external API but does not explicitly inherit from it
+   ╭▸ test/GovernedFunding.t.sol:15:10
+   │
+15 │ contract GovernedFundingTest is Test {
+   │          ━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-inheritance
+
+note[missing-inheritance]: contract `SecurityWallet` implements interface `ERC721A__IERC721Receiver`'s external API but does not explicitly inherit from it
+   ╭▸ test/Security.t.sol:25:10
+   │
+25 │ contract SecurityWallet {
+   │          ━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/missing-inheritance
+

@@ -1,0 +1,55 @@
+name: CI
+
+permissions: {}
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: Foundry project
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.1
+
+      - name: Show Forge version
+        run: forge --version
+
+      - name: Run Forge fmt
+        run: forge fmt --check
+
+      - name: Run Forge build
+        run: forge build --sizes
+
+      - name: Run Forge tests
+        run: forge test --fuzz-runs 2048 -vvv
+
+      - name: Inspect contract security lint findings
+        run: forge lint src --severity high med
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 23.8.0
+      - run: npm ci
+      - name: Rebuild and verify canonical assets
+        run: |
+          npm run build
+          node --test tools/card/*.test.mjs
+          git diff --exit-code -- media/dist/runtime.txt media/dist/assets.json src/PlayerTemplate.sol
+      - name: Mint locally and verify sandboxed playback
+        run: |
+          npx playwright-core install --with-deps chromium
+          npm run local
+          npm run browser -- --skip-video

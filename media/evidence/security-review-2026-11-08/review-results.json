@@ -1,0 +1,75 @@
+{
+  "reviewDate": "2026-11-08",
+  "compiler": "0.8.38+commit.1835d247",
+  "foundry": "1.8.1",
+  "node": "23.8.0",
+  "settings": {
+    "viaIR": true,
+    "optimizerRuns": 1,
+    "evmVersion": "prague"
+  },
+  "tests": {
+    "local": 66,
+    "localFuzzFunctions": 5,
+    "runsPerFuzzFunction": 2048,
+    "localFuzzCases": 10240,
+    "javascript": 5,
+    "canonicalBase": 19,
+    "canonicalBaseSepolia": 19,
+    "forkFuzzRunsPerNetwork": 256
+  },
+  "canonicalForks": {
+    "8453": 54809346,
+    "84532": 56151877
+  },
+  "publicTransactions": false,
+  "artifacts": {
+    "IndustrialImaginationFunding": {
+      "runtimeBytes": 8467,
+      "initcodeBytes": 16251
+    },
+    "IndustrialImaginationSeaDropFunding": {
+      "runtimeBytes": 21552,
+      "initcodeBytes": 31311
+    },
+    "IndustrialImaginationGovernedFunding": {
+      "runtimeBytes": 23989,
+      "initcodeBytes": 40260
+    },
+    "FundingCouncil": {
+      "runtimeBytes": 6286,
+      "initcodeBytes": 6375
+    },
+    "FundingCardRenderer": {
+      "runtimeBytes": 6062,
+      "initcodeBytes": 7730
+    },
+    "FundingAllowlist": {
+      "runtimeBytes": 844,
+      "initcodeBytes": 870
+    }
+  },
+  "sha256": {
+    "src/CardFiles.sol": "528b36b45a919a045f882211e9909e60d32161fca88a1722e85a119b9771e938",
+    "src/IndustrialImaginationGovernedFunding.sol": "265aba2aa8856852e810fb27e5598b1b2f6c4b33a8ff2ad9e0c2c145f9008e66",
+    "src/IndustrialImaginationFunding.sol": "05d0cab3856f605fda81b275780846c7fe775a60ad14dc944db40b074adef10d",
+    "src/FundingCouncil.sol": "e167ecda78226da10feaffc2253ea85d6ce748eebd08fe04d5924267ee7afa0d",
+    "src/FundingCore.sol": "f7e217f232b68fca2b739f611d5c149b89447f362918883a2c4dc8f9e80604ee",
+    "src/FundingAllowlist.sol": "2b9bf32ea4012d510df693b6d5ce89ebca1dd4876ff4c8dafa6c91c78574b5c0",
+    "src/FundingCardRenderer.sol": "42798061a498008b3a978616570007ce0407d3378fbbe6d17c5b97927c1e9a0b",
+    "src/IndustrialImaginationSeaDropFunding.sol": "d09cff2f4bf919d9fad08198d676f5ed338a0f9f5ba3c8f6a708ee8898599d2d",
+    "src/PlayerTemplate.sol": "84d9cf8801f11dc80d82bfb726ad355ba796ad4dfcf0075b002b71e1a5247244",
+    "test/Security.t.sol": "7e559469c201338b5f607c4fbd96d7c6e8ab98c8cfde14019c233e05e498b972",
+    "test/FundingCard.t.sol": "8a8056844f7626de417483cb1e9361027c6db44de626b5985174fbea23b94eef",
+    "test/GovernedFunding.t.sol": "9c5575d21b4150440ec2912a8821132c1abc24d7d94e9fe1adb1d4334ff8c2c0",
+    "test/SeaDropFunding.t.sol": "5c5c9ae745b4eda38e43d6e5b6da7464c6fd08da4104c9ca12e8df91ee237ad7",
+    "foundry.toml": "d828a65a1346768745dc3da4ec11011e3a9683a66bdccb0b223568b4110401b5",
+    "foundry.lock": "64f09e2913041e099bf67b250a33fee9b0722283dec3de1c230bfc36203000e4",
+    "remappings.txt": "10546ff8fedab2f821db5eb16de50ff6d9460febf3d9666d8a7b686c0231b516",
+    "tools/card/chain.mjs": "de6602c9e6777e5eea021464abe74f8aef32cda6a5883ac074ee282fdf0ea28e",
+    "tools/card/testnet.mjs": "8c163dcd001a9210decd1e0f69846cbc28b323892678b69cc98d0cb21e35af5b",
+    "tools/card/release-checks.mjs": "c84a42f931fed251b4fbf650baddc2d3936b43add5f1118717e6ada8efd66424",
+    "tools/card/release-checks.test.mjs": "003e64100af2e45a973d03f2d7d2d51549675713626e0b9c21acb885fd19d08d"
+  },
+  "assetReproducibility": "identical template, runtime, manifest and preview"
+}

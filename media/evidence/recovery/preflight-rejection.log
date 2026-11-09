@@ -1,0 +1,50 @@
+file:///Users/matheus/Projects/Industrial%20Imagination/Projects/Intra%20Company/Industrial%20Funding/contracts/node_modules/ethers/lib.esm/utils/errors.js:132
+            error = new Error(message);
+                    ^
+
+Error: execution reverted: "ETH_TRANSFER_FAILED" (action="estimateGas", data="0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000134554485f5452414e534645525f4641494c454400000000000000000000000000", reason="ETH_TRANSFER_FAILED", transaction={ "data": "0x161ac21f000000000000000000000000542e7117639aa7e426b9e47e748e5a37bfcce6a8000000000000000000000000fe1411d6864592549ade050215482e4385dfa0fb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001", "from": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f", "to": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5" }, invocation=null, revert={ "args": [ "ETH_TRANSFER_FAILED" ], "name": "Error", "signature": "Error(string)" }, code=CALL_EXCEPTION, version=6.15.0)
+    at makeError (file:///Users/matheus/Projects/Industrial%20Imagination/Projects/Intra%20Company/Industrial%20Funding/contracts/node_modules/ethers/lib.esm/utils/errors.js:132:21)
+    at getBuiltinCallException (file:///Users/matheus/Projects/Industrial%20Imagination/Projects/Intra%20Company/Industrial%20Funding/contracts/node_modules/ethers/lib.esm/abi/abi-coder.js:102:12)
+    at AbiCoder.getBuiltinCallException (file:///Users/matheus/Projects/Industrial%20Imagination/Projects/Intra%20Company/Industrial%20Funding/contracts/node_modules/ethers/lib.esm/abi/abi-coder.js:203:16)
+    at JsonRpcProvider.getRpcError (file:///Users/matheus/Projects/Industrial%20Imagination/Projects/Intra%20Company/Industrial%20Funding/contracts/node_modules/ethers/lib.esm/providers/provider-jsonrpc.js:691:32)
+    at file:///Users/matheus/Projects/Industrial%20Imagination/Projects/Intra%20Company/Industrial%20Funding/contracts/node_modules/ethers/lib.esm/providers/provider-jsonrpc.js:298:45
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  code: 'CALL_EXCEPTION',
+  action: 'estimateGas',
+  data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000134554485f5452414e534645525f4641494c454400000000000000000000000000',
+  reason: 'ETH_TRANSFER_FAILED',
+  transaction: {
+    to: '0x00005EA00Ac477B1030CE78506496e8C2dE24bf5',
+    data: '0x161ac21f000000000000000000000000542e7117639aa7e426b9e47e748e5a37bfcce6a8000000000000000000000000fe1411d6864592549ade050215482e4385dfa0fb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001',
+    from: '0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f'
+  },
+  invocation: null,
+  revert: {
+    signature: 'Error(string)',
+    name: 'Error',
+    args: [ 'ETH_TRANSFER_FAILED' ]
+  },
+  shortMessage: 'execution reverted: "ETH_TRANSFER_FAILED"',
+  info: {
+    error: {
+      code: 3,
+      message: 'execution reverted: ETH_TRANSFER_FAILED',
+      data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000134554485f5452414e534645525f4641494c454400000000000000000000000000'
+    },
+    payload: {
+      method: 'eth_estimateGas',
+      params: [
+        {
+          value: '0x186a3',
+          from: '0x23618e81e3f5cdf7f54c3d65f7fbc0abf5b21e8f',
+          to: '0x00005ea00ac477b1030ce78506496e8c2de24bf5',
+          data: '0x161ac21f000000000000000000000000542e7117639aa7e426b9e47e748e5a37bfcce6a8000000000000000000000000fe1411d6864592549ade050215482e4385dfa0fb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001'
+        }
+      ],
+      id: 69,
+      jsonrpc: '2.0'
+    }
+  }
+}
+
+Node.js v23.8.0

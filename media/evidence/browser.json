@@ -1,0 +1,47 @@
+{
+  "browser": "156.0.8078.80",
+  "viewport": "900x900",
+  "frameStats": {
+    "meanMs": 16.67833333214124,
+    "p95Ms": 16.899999976158142
+  },
+  "videoCheck": {
+    "duration": 23.998025,
+    "width": 900,
+    "height": 900,
+    "samples": [
+      [
+        1,
+        80.72607421875
+      ],
+      [
+        7,
+        15.303955078125
+      ],
+      [
+        13,
+        87.365966796875
+      ],
+      [
+        19,
+        15.28857421875
+      ],
+      [
+        23.6,
+        80.570068359375
+      ]
+    ]
+  },
+  "requests": [],
+  "passed": [
+    "sandbox tokenHTML",
+    "drag",
+    "touch",
+    "idle resume",
+    "reduced motion",
+    "resize",
+    "hidden pause",
+    "keyboard",
+    "context loss"
+  ]
+}

@@ -1,0 +1,5 @@
+
+> industrial-funding-card@1.0.0 build
+> node tools/card/build.mjs
+
+Formatted /Users/matheus/Projects/Industrial Imagination/Projects/Intra Company/Industrial Funding/contracts/src/PlayerTemplate.sol

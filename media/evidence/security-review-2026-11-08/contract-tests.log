@@ -1,0 +1,165 @@
+2026-11-08T18:51:58.313055Z  WARN foundry_common::preprocessor: failed preprocessing err=solar reported errors:
+
+error[2353]: invalid contract `IERC165` specified in override list
+    ╭▸ lib/seadrop/src/ERC721ContractMetadata.sol:352:9
+    │
+352 │         override(IERC165, ERC721A)
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+
+error[2353]: invalid contract `IERC165` specified in override list
+    ╭▸ lib/seadrop/src/ERC721ContractMetadata.sol:352:9
+    │
+352 │         override(IERC165, ERC721A)
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+
+error[2353]: invalid contract `IERC165` specified in override list
+    ╭▸ lib/seadrop/src/ERC721SeaDrop.sol:470:9
+    │
+470 │         override(IERC165, ERC721ContractMetadata)
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+
+error[2353]: invalid contract `ERC721ContractMetadata` specified in override list
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:127:5
+    │
+127 │     override(ERC721ContractMetadata, ISeaDropTokenContractMetadata)
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ note: contract is not a direct or indirect base
+Compiling 1 files with Solc 0.8.38
+Solc 0.8.38 finished in 3.75s
+Compiler run successful with warnings:
+Warning (8429): Virtual modifiers are deprecated and scheduled for removal.
+  --> lib/seadrop/lib/solmate/src/utils/ReentrancyGuard.sol:10:5:
+   |
+10 |     modifier nonReentrant() virtual {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8429): Virtual modifiers are deprecated and scheduled for removal.
+   --> lib/seadrop/src/SeaDrop.sol:135:5:
+    |
+135 |     modifier onlyINonFungibleSeaDropToken() virtual {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (8429): Virtual modifiers are deprecated and scheduled for removal.
+   --> lib/solady/src/auth/Ownable.sol:274:5:
+    |
+274 |     modifier onlyOwner() virtual {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:23:26:
+   |
+23 |     function _throwError(RecoverError error) private pure {
+   |                          ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+  --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:89:29:
+   |
+89 |         (address recovered, RecoverError error) = tryRecover(hash, signature);
+   |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:113:29:
+    |
+113 |         (address recovered, RecoverError error) = tryRecover(hash, r, vs);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (6335): "error" will be promoted to keyword in the future and will not be allowed as an identifier anymore.
+   --> lib/seadrop/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol:152:29:
+    |
+152 |         (address recovered, RecoverError error) = tryRecover(hash, v, r, s);
+    |                             ^^^^^^^^^^^^^^^^^^
+
+Warning (5740): Unreachable code.
+   --> lib/seadrop/lib/ERC721A/contracts/ERC721A.sol:636:9:
+    |
+636 |         if (to.code.length != 0)
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 8 tests for test/SeaDropFunding.t.sol:SeaDropFundingTest
+[PASS] testAllowlistTermsAndSharedWalletLimit() (gas: 865090)
+[PASS] testBatchFeesAndNetVesting() (gas: 968369)
+[PASS] testFuzzConservation(uint80,uint16,uint8,bool) (runs: 2048, μ: 1307460, ~: 1137165)
+[PASS] testNoBypassAndUnauthorizedReceipt() (gas: 632164)
+[PASS] testOwnerReceiverCannotRedirectPendingMintProceeds() (gas: 950931)
+[PASS] testReceiverAndFeeCallbacksCannotFinalizeUnpaidSale() (gas: 928289)
+[PASS] testUnderpaymentRollsBackAllState() (gas: 479118)
+[PASS] testUpstreamSupplyTransfersAndBurnsRespectFundingRules() (gas: 789219)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 1.83s (1.83s CPU time)
+
+Ran 27 tests for test/GovernedFunding.t.sol:GovernedFundingTest
+[PASS] testApprovalCapsCycleAndDoesNotReleaseNextDays() (gas: 1040916)
+[PASS] testEscapeAfterApprovedButUnclaimedMonthIncludesItsMoney() (gas: 1282321)
+[PASS] testEscapeNeedsClosedQuorateMajorityAndCanBeRetried() (gas: 1278809)
+[PASS] testEscapeRefundsAllRemainingFundsAndDust() (gas: 1612965)
+[PASS] testFuzzPaidPlusRefundsEqualsNet(uint8,uint8) (runs: 2048, μ: 1556914, ~: 1659347)
+[PASS] testFuzzWindDownConservation(uint8,bool,uint96) (runs: 2048, μ: 1201694, ~: 1201366)
+[PASS] testIsolatedSilenceAndOutOfOrderCatchUpConservePrincipal() (gas: 1475989)
+[PASS] testMajorityApprovalResetsOwnerInactivity() (gas: 848562)
+[PASS] testNoRefundBeforeEscapeEvenAfterVestingEnds() (gas: 376311)
+[PASS] testNonconsecutiveFailuresAndSilentCycleCannotQualify() (gas: 712156)
+[PASS] testOldSilentCycleClaimableWhenLatestReviewRejected() (gas: 713355)
+[PASS] testOwnerClosesPartialSaleAndCanStartPeriod() (gas: 1173391)
+[PASS] testOwnerWindDownBeforeStartRequiresNinetyDays() (gas: 515534)
+[PASS] testPublicBackstopRoundsUpPartialLastCycle() (gas: 779815)
+[PASS] testQuorumSnapshotLowTurnoutTieAndBatchOwnership() (gas: 2228606)
+[PASS] testRejectedMonthCatchesUpOnLaterApproval() (gas: 910444)
+[PASS] testRejectedPairKeepsPriorityOverOwnerWindDown() (gas: 1097695)
+[PASS] testRejectingBeneficiaryDoesNotBlockRefunds() (gas: 764394)
+[PASS] testRepeatedSilenceClaimDoesNotAdvanceCumulativeCheckpoint() (gas: 1350658)
+[PASS] testSilenceDoesNotResetOwnerInactivity() (gas: 689945)
+[PASS] testStartRequiresFinalizationAndOwnerOnce() (gas: 449940)
+[PASS] testStartedPublicBackstopStopsClaimsAtExactDeadline() (gas: 704884)
+[PASS] testTotalSilenceOnlyAtDay37AndViewMatchesClaim() (gas: 739970)
+[PASS] testTwoRejectionsOnlyEnableSeparateVoteAndApprovalResets() (gas: 1241283)
+[PASS] testUnstartedPublicBackstopAndLateStartCannotBypassIt() (gas: 409849)
+[PASS] testWindDownBeneficiarySurvivesOwnershipTransfer() (gas: 463343)
+[PASS] testWindDownCannotRunBeforeFinalizationOrAfterCouncilEscape() (gas: 1165864)
+Suite result: ok. 27 passed; 0 failed; 0 skipped; finished in 2.34s (2.34s CPU time)
+
+Ran 12 tests for test/FundingCard.t.sol:FundingCardTest
+[PASS] testAggregateAndSliceCaps() (gas: 2534586)
+[PASS] testChangedAssetBytesAreRejectedAtRead() (gas: 269994)
+[PASS] testCorruptHash() (gas: 9726)
+[PASS] testEOAAndDescriptorPrefix() (gas: 11393)
+[PASS] testFuzzBurnAccounting(uint16,uint16,bool) (runs: 2048, μ: 602888, ~: 607296)
+[PASS] testMalformedDescriptorHeadersAndTrailingData() (gas: 229481)
+[PASS] testMetadata() (gas: 1303633)
+[PASS] testMetadataEscapesControlCharactersAndUnicode() (gas: 434691)
+[PASS] testMidstreamClaimAndFinalBurn() (gas: 611699)
+[PASS] testSelectFreeze() (gas: 172525)
+[PASS] testSliceBoundsAndPrefix() (gas: 228876)
+[PASS] testSoulboundAndBurnGates() (gas: 443190)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 4.33s (3.25s CPU time)
+
+Ran 19 tests for test/Security.t.sol:SecurityTest
+[PASS] testAllSoulboundTransferAndApprovalEntrypointsReject() (gas: 587779)
+[PASS] testExtremePeriodsAreRejectedBeforeAcceptingFunds() (gas: 11799)
+[PASS] testFuzzInstallmentModel(uint256,uint80,uint16,uint16) (runs: 2048, μ: 5369664, ~: 5328682)
+[PASS] testLargestSupportedPrincipalAndDurationDoNotOverflow() (gas: 1106443)
+[PASS] testOwnerCallbackCannotClaimUpfrontTwice() (gas: 1347964)
+[PASS] testRealSeaDropAllowlistOddTreeAndTermsCannotBeForged() (gas: 748938)
+[PASS] testRealSeaDropConfigurationCannotBypassFixedEconomics() (gas: 131914)
+[PASS] testRealSeaDropPayoutRedirectInFeeCallbackCannotStealCurrentPayment() (gas: 1432251)
+[PASS] testRealSeaDropPayoutRedirectInNFTCallbackRevertsEverything() (gas: 1243862)
+[PASS] testRealSeaDropReceiverAndFeeCannotFinalizeBeforeSettlement() (gas: 1218620)
+[PASS] testRealSeaDropRejectingFeeRollsBackMintAndValue() (gas: 1077892)
+[PASS] testRealSeaDropRejectingNFTRollsBackMintAndValue() (gas: 1033232)
+[PASS] testRealSeaDropSameBlockBurstHasNoPendingSettlementLeak() (gas: 5119198)
+[PASS] testRealSeaDropSponsoredMintAndWrongFeeRecipient() (gas: 695814)
+[PASS] testRefundCallbackCannotBurnTwiceOrDrainOtherHolder() (gas: 1754149)
+[PASS] testRejectingHolderGetsForcedRefundWithoutBlockingOthers() (gas: 1740109)
+[PASS] testReviewDeadlineAndMintDeadlineBoundaries() (gas: 1326924)
+[PASS] testWindDownReserveHandlesEntireUint256Balance() (gas: 796464)
+[PASS] testZeroFeeAndOneWeiPrincipalConserveEveryWei() (gas: 2045401)
+Suite result: ok. 19 passed; 0 failed; 0 skipped; finished in 4.33s (4.36s CPU time)
+
+Ran 4 test suites in 4.34s (12.83s CPU time): 66 tests passed, 0 failed, 0 skipped (66 total tests)
+2026-11-08T18:52:06.455604Z  WARN evm::traces: failed to flush signature cache err=failed to create file "/Users/matheus/.foundry/cache/signatures": Operation not permitted (os error 1)

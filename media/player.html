@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' blob:; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'"><title>Industrial Imagination</title><style>*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(ellipse at center,#19191b,#09090a 73%)}canvas,img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}canvas{touch-action:none;outline:0}body[data-state=ready] img{visibility:hidden}body:not([data-state=ready]) canvas{visibility:hidden}</style><body><img alt="Industrial Imagination platinum card" src="data:image/webp;base64,{{preview}}"><script type="application/octet-stream" id="three">{{three}}</script><script type="application/octet-stream" id="card">{{card}}</script><script type="module">
+const urls=[];
+async function unpack(id){
+ const bytes=Uint8Array.from(atob(document.getElementById(id).textContent),c=>c.charCodeAt(0));
+ const source=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+ const url=URL.createObjectURL(new Blob([source],{type:'text/javascript'}));urls.push(url);return import(url);
+}
+try{const [three,card]=await Promise.all([unpack('three'),unpack('card')]);if(three.REVISION!=='162')throw Error('Three revision');window.fundingCard=await card.mount(three)}
+catch(error){document.body.dataset.state='fallback';console.error(error)}
+finally{urls.forEach(url=>URL.revokeObjectURL(url))}
+</script>

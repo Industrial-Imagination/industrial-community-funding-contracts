@@ -1,0 +1,895 @@
+note[inline-assembly]: inline assembly (declared memory-safe); review business logic and side effects
+   ╭▸ src/CardFiles.sol:19:5
+   │
+19 │     assembly ("memory-safe") {
+   │     ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inline-assembly
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/IndustrialImaginationGovernedFunding.sol:11:35
+   │
+11 │   FundingCouncil public immutable council;
+   │                                   ━━━━━━━ help: consider using: `COUNCIL`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/IndustrialImaginationSeaDropFunding.sol:43:38
+   │
+43 │   FundingAllowlist private immutable _allowlistBuilder;
+   │                                      ━━━━━━━━━━━━━━━━━ help: consider using: `_ALLOWLIST_BUILDER`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/FundingCouncil.sol:27:36
+   │
+27 │   ICouncilFunding public immutable funding;
+   │                                    ━━━━━━━ help: consider using: `FUNDING`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+   ╭▸ src/FundingCore.sol:23:29
+   │
+23 │   bytes32 private immutable _rendererCodeHash;
+   │                             ━━━━━━━━━━━━━━━━━ help: consider using: `_RENDERER_CODE_HASH`
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/screaming-snake-case-immutable
+
+note[inline-assembly]: inline assembly (declared memory-safe); review business logic and side effects
+   ╭▸ src/CardFiles.sol:34:5
+   │
+34 │     assembly ("memory-safe") {
+   │     ━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/inline-assembly
+
+note[mixed-case-function]: function names should use mixedCase
+    ╭▸ src/FundingCore.sol:455:12
+    │
+455 │   function _sendETH(address to, uint256 amount) internal {
+    │            ━━━━━━━━ help: consider using: `_sendEth`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/mixed-case-function
+
+note[event-fields]: event has unindexed fields that may benefit from being indexed: excludedOwner (address)
+   ╭▸ src/FundingCouncil.sol:98:9
+   │
+98 │   event PeriodStarted(uint256 start, uint256 eligibleSupply, uint256 quorum, address excludedOwner);
+   │         ━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/event-fields
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:29:30
+   │
+29 │     if (size < 224 || size > 128 + 96 * 32) revert InvalidAsset();
+   │                              ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:29:36
+   │
+29 │     if (size < 224 || size > 128 + 96 * 32) revert InvalidAsset();
+   │                                    ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:29:41
+   │
+29 │     if (size < 224 || size > 128 + 96 * 32) revert InvalidAsset();
+   │                                         ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:35:41
+   │
+35 │       tupleOffset := mload(add(encoded, 32))
+   │                                         ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:36:41
+   │
+36 │       arrayOffset := mload(add(encoded, 96))
+   │                                         ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:37:40
+   │
+37 │       sliceCount := mload(add(encoded, 128))
+   │                                        ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:40:22
+   │
+40 │       tupleOffset != 32 || arrayOffset != 64 || sliceCount == 0 || sliceCount > 32
+   │                      ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:40:81
+   │
+40 │       tupleOffset != 32 || arrayOffset != 64 || sliceCount == 0 || sliceCount > 32
+   │                                                                                 ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:41:20
+   │
+41 │         || size != 128 + 96 * sliceCount
+   │                    ━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:41:26
+   │
+41 │         || size != 128 + 96 * sliceCount
+   │                          ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+   ╭▸ src/CardFiles.sol:44:96
+   │
+44 │     if (file.size == 0 || file.size > LIMIT || file.slices.length == 0 || file.slices.length > 32) {
+   │                                                                                                ━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:287:55
+    │
+287 │       return (approved, _cumulativePayment(approved), false);
+    │                                                       ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:291:65
+    │
+291 │       if (elapsed < CYCLE + SILENCE_DELAY) return (approved, 0, false);
+    │                                                                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:189:17
+    │
+189 │     if (fees >= 10000 || price > type(uint80).max) revert InvalidSeaDropConfiguration();
+    │                 ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:190:21
+    │
+190 │     return price * (10000 - fees) / 10000;
+    │                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+note[literal-instead-of-constant]: this literal appears multiple times in the contract; declare a named constant for it
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:190:37
+    │
+190 │     return price * (10000 - fees) / 10000;
+    │                                     ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/literal-instead-of-constant
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:294:67
+    │
+294 │       if (outcome(cycle) != Outcome.Silence) return (approved, 0, false);
+    │                                                                   ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:298:80
+    │
+298 │       return (cycle, cycle > paidThroughCycle ? _cumulativePayment(cycle) : 0, false);
+    │                                                                                ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:300:50
+    │
+300 │     if (result != Outcome.Silence) return (0, 0, false);
+    │                                                  ━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:304:76
+    │
+304 │     if (cycle <= paidThroughCycle || silencePaid[cycle]) return (cycle, 0, true);
+    │                                                                            ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[boolean-cst]: misuse of a boolean constant
+    ╭▸ src/FundingCouncil.sol:305:57
+    │
+305 │     return (cycle, _vested(cycle) - _vested(cycle - 1), true);
+    │                                                         ━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/boolean-cst
+
+warning[missing-events-access-control]: `totalMinted` is changed without an event but is used for access control
+    ╭▸ src/FundingCore.sol:414:5
+    │
+414 │     totalMinted += quantity;
+    │     ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[missing-events-access-control]: `mintedBy` is changed without an event but is used for access control
+    ╭▸ src/FundingCore.sol:415:5
+    │
+415 │     mintedBy[minter] += quantity;
+    │     ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+  ╭▸ src/FundingCouncil.sol:4:11
+  │
+4 │ interface ICouncilFunding {
+  │           ━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/FundingAllowlist.sol:18:21
+   │
+18 │     for (uint256 i; i < size; ++i) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+note[multi-contract-file]: prefer having only one contract, interface or library per file
+   ╭▸ src/FundingCouncil.sol:15:10
+   │
+15 │ contract FundingCouncil {
+   │          ━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/multi-contract-file
+
+warning[encode-packed-collision]: `abi.encodePacked()` called with multiple dynamic type arguments; hash collisions possible
+   ╭▸ src/FundingCardRenderer.sol:39:25
+   │
+39 │       bytes memory html = abi.encodePacked(
+   │ ┏━━━━━━━━━━━━━━━━━━━━━━━━━┛
+40 │ ┃       Player.PART0,
+41 │ ┃       poster,
+42 │ ┃       Player.PART1,
+   ‡ ┃
+46 │ ┃       Player.PART3
+47 │ ┃     );
+   │ ┗━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/encode-packed-collision
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/CardFiles.sol:54:31
+   │
+54 │       if (count > file.size - offset) revert InvalidAsset();
+   │                               ━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/CardFiles.sol:48:21
+   │
+48 │     for (uint256 i; i < file.slices.length; ++i) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[encode-packed-collision]: `abi.encodePacked()` called with multiple dynamic type arguments; hash collisions possible
+   ╭▸ src/FundingCardRenderer.sol:48:25
+   │
+48 │       bytes memory json = abi.encodePacked(
+   │ ┏━━━━━━━━━━━━━━━━━━━━━━━━━┛
+49 │ ┃       '{"name":"',
+50 │ ┃       LibString.escapeJSON(collectionName),
+51 │ ┃       " #",
+   ‡ ┃
+57 │ ┃       '"}'
+58 │ ┃     );
+   │ ┗━━━━━┛
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/encode-packed-collision
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/CardFiles.sol:23:37
+   │
+23 │     if (length <= 1 || prefix != 0) revert InvalidAsset();
+   │                                     ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/FundingAllowlist.sol:22:23
+   │
+22 │       for (uint256 i; i < size; i += 2) {
+   │                       ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/FundingCore.sol:237:3
+    │
+237 │ ┏   modifier onlyFundingOwner() {
+238 │ ┃     if (msg.sender != _fundingOwner()) revert NotAllowed();
+239 │ ┃     _;
+240 │ ┃   }
+    │ ┗━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+237 ±   modifier onlyFundingOwner() {
+238 +     _onlyFundingOwner();
+239 +     _;
+240 +   }
+241 + 
+242 +   function _onlyFundingOwner() internal {
+243 +     if (msg.sender != _fundingOwner()) revert NotAllowed();
+244 +   }
+    ╰╴
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/CardFiles.sol:51:9
+   │
+51 │         revert InvalidAsset();
+   │         ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+   ╭▸ src/CardFiles.sol:54:39
+   │
+54 │       if (count > file.size - offset) revert InvalidAsset();
+   │                                       ━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[missing-events-access-control]: `excludedOwner` is changed without an event but is used for access control
+    ╭▸ src/FundingCouncil.sol:135:5
+    │
+135 │     excludedOwner = funding.owner();
+    │     ━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-access-control
+
+warning[uninitialized-local]: local variable is read before being initialized
+   ╭▸ src/IndustrialImaginationFunding.sol:52:21
+   │
+52 │     for (uint256 i; i < quantity; ++i) {
+   │                     ━
+   │
+   ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:212:21
+    │
+212 │     for (uint256 i; i < wallets.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:213:37
+    │
+213 │       if (wallets[i] == address(0)) revert InvalidSeaDropConfiguration();
+    │                                     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:115:24
+    │
+115 │     uint256 perToken = council.authorizeClaim(cycle);
+    │                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/FundingCore.sol:277:64
+    │
+277 │   function claimOwnerShare() external virtual onlyFundingOwner nonReentrant {
+    │                                                                ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:101:58
+    │
+101 │   function claimOwnerShare() external override onlyOwner nonReentrant {
+    │                                                          ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:221:12
+    │
+221 │       return MintParams(
+    │ ┏━━━━━━━━━━━━┛
+222 │ ┃       GROSS_MINT_PRICE,
+223 │ ┃       MAX_PER_WALLET,
+224 │ ┃       mintStartTime,
+    ‡ ┃
+229 │ ┃       true
+230 │ ┃     );
+    │ ┗━━━━━┛ help: consider using named fields: `MintParams({ mintPrice: GROSS_MINT_PRICE, maxTotalMintableByWallet: MAX_PER_WALLET, startTime: mintStartTime, endTime: mintStartTime + MINT_PERIOD, dropStageIndex: 1, maxTokenSupplyForStage: MAX_SUPPLY, feeBps: SEADROP_FEE_BPS, restrictFeeRecipients: true })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[missing-events-arithmetic]: `finalizedAt` is changed without an event but is used in arithmetic
+    ╭▸ src/FundingCouncil.sol:126:5
+    │
+126 │     finalizedAt = block.timestamp;
+    │     ━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationFunding.sol:105:9
+    │
+105 │     if (block.timestamp > mintStartTime + MINT_PERIOD) revert MintPeriodEnded();
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:107:70
+    │
+107 │   function claimOwnerShareForCycle(uint256 cycle) external onlyOwner nonReentrant {
+    │                                                                      ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+note[asm-keccak256]: use of inefficient hashing mechanism; consider using inline assembly
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:235:12
+    │
+235 │     return keccak256(abi.encode(wallet, allowlistParams()));
+    │            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/asm-keccak256
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCore.sol:313:41
+    │
+313 │     if (!closeEarly && !mintComplete && block.timestamp <= mintStartTime + MINT_PERIOD) {
+    │                                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[missing-events-arithmetic]: `_approvedThrough` is changed without an event but is used in arithmetic
+    ╭▸ src/FundingCouncil.sol:247:37
+    │
+247 │     if (result == Outcome.Approved) _approvedThrough = cycle;
+    │                                     ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:240:9
+    │
+240 │     if (block.timestamp + MINT_PERIOD > type(uint48).max) revert InvalidSeaDropConfiguration();
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:248:28
+    │
+248 │       drop.updateAllowList(AllowListData(root, new string[](0), ""));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `AllowListData({ merkleRoot: root, publicKeyURIs: new string[](0), allowListURI: "" })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:120:5
+    │
+120 │     emit OwnerShareClaimed(amount);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCore.sol:434:9
+    │
+434 │     if (elapsed >= VESTING_PERIOD) return LOCKED_PER_TOKEN;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:136:9
+    │
+136 │     if (elapsed >= VESTING_PERIOD) return LOCKED_PER_TOKEN;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:264:9
+    │
+264 │ ┏         PublicDrop(
+265 │ ┃           uint80(GROSS_MINT_PRICE),
+266 │ ┃           uint48(mintStartTime),
+267 │ ┃           uint48(mintStartTime + MINT_PERIOD),
+    ‡ ┃
+270 │ ┃           true
+271 │ ┃         )
+    │ ┗━━━━━━━━━┛ help: consider using named fields: `PublicDrop({ mintPrice: uint80(GROSS_MINT_PRICE), startTime: uint48(mintStartTime), endTime: uint48(mintStartTime + MINT_PERIOD), maxTotalMintableByWallet: uint16(MAX_PER_WALLET), feeBps: SEADROP_FEE_BPS, restrictFeeRecipients: true })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[arbitrary-send-eth]: ETH is sent to a user-controlled destination; restrict the destination or the caller
+    ╭▸ src/FundingCore.sol:456:5
+    │
+456 │     SafeTransferLib.forceSafeTransferETH(to, amount);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/arbitrary-send-eth
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:265:11
+    │
+265 │           uint80(GROSS_MINT_PRICE),
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint80' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:153:5
+    │
+153 │     council.authorizeWindDown(msg.sender == owner());
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:266:11
+    │
+266 │           uint48(mintStartTime),
+    │           ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint48' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:161:5
+    │
+161 │ ┏     emit WindDownActivated(
+162 │ ┃       msg.sender, windDownBeneficiary, windDownOwnerReserve, escapePoolAtActivation
+163 │ ┃     );
+    │ ┗━━━━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/IndustrialImaginationGovernedFunding.sol:164:5
+    │
+164 │     emit EscapePoolOpened(escapePoolAtActivation, activeSupply());
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:267:11
+    │
+267 │           uint48(mintStartTime + MINT_PERIOD),
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint48' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[unsafe-typecast]: typecasts that can truncate values should be checked
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:268:11
+    │
+268 │           uint16(MAX_PER_WALLET),
+    │           ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint16' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:282:27
+    │
+282 │     if (vestingStarted || block.timestamp > mintStartTime + MINT_PERIOD) revert MintPeriodEnded();
+    │                           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:328:7
+    │
+328 │       drop.updatePublicDrop(disabledDrop);
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[reentrancy-no-eth]: external call can be reentered before `locked` is updated
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:332:7
+    │
+332 │       drop.updateAllowList(AllowListData(bytes32(0), new string[](0), ""));
+    │       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-no-eth
+
+warning[non-reentrant-not-first]: `nonReentrant` should be the first modifier
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:321:43
+    │
+321 │   function closeMint() external onlyOwner nonReentrant {
+    │                                           ━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/non-reentrant-not-first
+
+note[named-struct-fields]: prefer initializing structs with named fields
+    ╭▸ src/IndustrialImaginationSeaDropFunding.sol:332:28
+    │
+332 │       drop.updateAllowList(AllowListData(bytes32(0), new string[](0), ""));
+    │                            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ help: consider using named fields: `AllowListData({ merkleRoot: bytes32(0), publicKeyURIs: new string[](0), allowListURI: "" })`
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/named-struct-fields
+
+warning[missing-events-arithmetic]: `paidThroughCycle` is changed without an event but is used in arithmetic
+    ╭▸ src/FundingCouncil.sol:274:7
+    │
+274 │       paidThroughCycle = through;
+    │       ━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/missing-events-arithmetic
+
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/FundingCouncil.sol:113:3
+    │
+113 │ ┏   modifier onlyFunding() {
+114 │ ┃     if (msg.sender != address(funding)) revert Unauthorized();
+115 │ ┃     _;
+116 │ ┃   }
+    │ ┗━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+113 ±   modifier onlyFunding() {
+114 +     _onlyFunding();
+115 +     _;
+116 +   }
+117 + 
+118 +   function _onlyFunding() internal {
+119 +     if (msg.sender != address(funding)) revert Unauthorized();
+120 +   }
+    ╰╴
+
+note[unwrapped-modifier-logic]: wrap modifier logic to reduce code size
+    ╭▸ src/FundingCouncil.sol:118:3
+    │
+118 │ ┏   modifier live() {
+119 │ ┃     if (escapeActivated) revert Escaped();
+120 │ ┃     _;
+121 │ ┃   }
+    │ ┗━━━┛
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/unwrapped-modifier-logic
+help: wrap modifier logic to reduce code size
+    ╭╴
+118 ±   modifier live() {
+119 +     _live();
+120 +     _;
+121 +   }
+122 + 
+123 +   function _live() internal {
+124 +     if (escapeActivated) revert Escaped();
+125 +   }
+    ╰╴
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:151:29
+    │
+151 │     return deadline != 0 && block.timestamp >= deadline;
+    │                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:161:25
+    │
+161 │       if (!ownerCall || block.timestamp < lastDecision + WIND_DOWN_DELAY) revert InvalidPeriod();
+    │                         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/FundingCouncil.sol:199:21
+    │
+199 │     for (uint256 i; i < tokenIds.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:193:9
+    │
+193 │     if (block.timestamp < start || block.timestamp >= start + VOTING) revert VotingClosed();
+    │         ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:193:36
+    │
+193 │     if (block.timestamp < start || block.timestamp >= start + VOTING) revert VotingClosed();
+    │                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:207:9
+    │
+207 │     if (block.timestamp < start + VOTING) return Outcome.Unresolved;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:213:40
+    │
+213 │     if (ballot.yes + ballot.no == 0 && block.timestamp >= start + SILENCE_DELAY) {
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:241:36
+    │
+241 │     if (cycle == _recordedCycle || block.timestamp < reviewDeadline(cycle)) return;
+    │                                    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+note[costly-loop]: storage write inside a loop
+    ╭▸ src/FundingCouncil.sol:271:9
+    │
+271 │         _silencePaidTree[i] += payableAmount;
+    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/costly-loop
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:291:11
+    │
+291 │       if (elapsed < CYCLE + SILENCE_DELAY) return (approved, 0, false);
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:351:11
+    │
+351 │       if (block.timestamp < previous.startedAt + VOTING || _escapeApproved(previous)) {
+    │           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/FundingCouncil.sol:370:21
+    │
+370 │     for (uint256 i; i < tokenIds.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:365:47
+    │
+365 │     if (round == 0 || round != escapeRound || block.timestamp >= ballot.startedAt + VOTING) {
+    │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/FundingCouncil.sol:378:47
+    │
+378 │     if (round == 0 || round != escapeRound || block.timestamp < ballot.startedAt + VOTING) {
+    │                                               ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[reentrancy-events]: event emitted after an external call; reentrancy can reorder or fabricate logs that off-chain consumers rely on
+    ╭▸ src/FundingCouncil.sol:387:5
+    │
+387 │     emit EscapeActivated(round, block.timestamp);
+    │     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/reentrancy-events
+
+warning[uninitialized-local]: local variable is read before being initialized
+    ╭▸ src/FundingCouncil.sol:404:21
+    │
+404 │     for (uint256 i; i < tokenIds.length; i++) {
+    │                     ━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/uninitialized-local
+
+warning[calls-loop]: external call inside a loop
+    ╭▸ src/FundingCouncil.sol:416:40
+    │
+416 │     if (msg.sender == excludedOwner || funding.ownerOf(tokenId) != msg.sender) {
+    │                                        ━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/calls-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/FundingCouncil.sol:417:7
+    │
+417 │       revert Unauthorized();
+    │       ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/FundingCouncil.sol:407:34
+    │
+407 │       if (ballot.voted[tokenId]) revert AlreadyVoted();
+    │                                  ━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+
+note[pragma-inconsistent]: 2 different Solidity pragma version requirements are used: ^0.8.21, ^0.8.24
+  ╭▸ src/CardFiles.sol:2:1
+  │
+2 │ pragma solidity ^0.8.24;
+  │ ━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/pragma-inconsistent
+
+note[missing-inheritance]: contract `IndustrialImaginationGovernedFunding` implements interface `ICouncilFunding`'s external API but does not explicitly inherit from it
+  ╭▸ src/IndustrialImaginationGovernedFunding.sol:9:10
+  │
+9 │ contract IndustrialImaginationGovernedFunding is IndustrialImaginationSeaDropFunding {
+  │          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ╰ help: https://getfoundry.sh/forge/linting/missing-inheritance
+

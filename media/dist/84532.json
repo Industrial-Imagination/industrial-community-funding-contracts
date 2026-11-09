@@ -1,0 +1,31 @@
+{
+  "chainId": 84532,
+  "registry": "0xFe1411d6864592549AdE050215482e4385dFa0FB",
+  "block": 54460407,
+  "assets": [
+    {
+      "role": "three",
+      "filename": "three-v0.162.0-module.min.js.Base64.gz",
+      "size": 225020,
+      "hash": "0xbb87a331ea68a93f8c3b5d679498aa64d56a2e5fd72d52cfd804d4c5a972ad1e",
+      "pointer": "0x45466738CDDB1245C6e2F508EF211B286365A747",
+      "status": "verified"
+    },
+    {
+      "role": "card",
+      "filename": "iif-card-5f655ae2dd6e51ad.txt",
+      "size": 64416,
+      "hash": "0x5f655ae2dd6e51ad195f3e45c07c88d0d822dca43adaa995434cc6dcb8c07578",
+      "pointer": "0x0319476511D860b9Cb6aB28C3E6BB48671603030",
+      "status": "verified"
+    },
+    {
+      "role": "preview",
+      "filename": "iif-preview-f2c74a9fe2f7ae7b.webp",
+      "size": 17770,
+      "hash": "0xf2c74a9fe2f7ae7b04e346fdc29f67227f97594763855be79d646877b26f6e40",
+      "pointer": "0x0fD58bc4060269d3F9a77c7dB1581E63b68a8a7A",
+      "status": "verified"
+    }
+  ]
+}

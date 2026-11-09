@@ -1,0 +1,29 @@
+{
+  "name": "industrial-funding-card",
+  "version": "1.0.0",
+  "description": "Soulbound SeaDrop funding cards with net proceeds, monthly holder reviews and escape refunds.",
+  "scripts": {
+    "build": "node tools/card/build.mjs",
+    "preview": "node tools/card/browser.mjs --preview && npm run build",
+    "local": "node tools/card/local.mjs",
+    "browser": "node tools/card/browser.mjs",
+    "test": "forge test -vv && node --test tools/card/*.test.mjs",
+    "test:security": "forge test --match-path test/Security.t.sol --fuzz-runs 2048 -vv",
+    "test:seadrop:fork": "node tools/card/seadrop-fork.mjs",
+    "deploy:testnet": "bash tools/card/deploy-testnet.sh",
+    "test:governed:fork": "node tools/card/governed-fork.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.2.6",
+    "ethers": "6.15.0",
+    "playwright-core": "1.58.2",
+    "sharp": "0.34.3"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3"
+  },
+  "private": true
+}

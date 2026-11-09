@@ -1,0 +1,77 @@
+{
+  "forkBlock": 54833770,
+  "publicTransactions": false,
+  "release": {
+    "chainId": 84532,
+    "registry": "0xFe1411d6864592549AdE050215482e4385dFa0FB",
+    "block": 54833770,
+    "assets": [
+      {
+        "role": "three",
+        "filename": "three-v0.162.0-module.min.js.Base64.gz",
+        "size": 225020,
+        "hash": "0xbb87a331ea68a93f8c3b5d679498aa64d56a2e5fd72d52cfd804d4c5a972ad1e",
+        "pointer": "0x45466738CDDB1245C6e2F508EF211B286365A747",
+        "status": "verified"
+      },
+      {
+        "role": "card",
+        "filename": "iif-card-5f655ae2dd6e51ad.txt",
+        "size": 64416,
+        "hash": "0x5f655ae2dd6e51ad195f3e45c07c88d0d822dca43adaa995434cc6dcb8c07578",
+        "pointer": "0x0319476511D860b9Cb6aB28C3E6BB48671603030",
+        "status": "verified"
+      },
+      {
+        "role": "preview",
+        "filename": "iif-preview-f2c74a9fe2f7ae7b.webp",
+        "size": 17770,
+        "hash": "0xf2c74a9fe2f7ae7b04e346fdc29f67227f97594763855be79d646877b26f6e40",
+        "pointer": "0x0fD58bc4060269d3F9a77c7dB1581E63b68a8a7A",
+        "status": "verified"
+      }
+    ],
+    "collectionType": "IndustrialImaginationGovernedFunding",
+    "rendererTransaction": "0x26af3d74b40f8f2230aeb65a47ce7e95aee55d1edd61ca2bf3992693065e4aac",
+    "fundingTransaction": "0x6ee428f1f3ea9d411750105a8b1bd8c87dda30ebcd434cf944489d4c28e3023e",
+    "fundingDeploymentBlock": 54833772,
+    "renderer": "0x9436008F682410Fa2CF1E6Ca73B3Be25A03a6023",
+    "funding": "0x01d0187f1f0A89eef880D444409a31C93748608a",
+    "seaDrop": "0x00005EA00Ac477B1030CE78506496e8C2dE24bf5",
+    "seaDropCodeHash": "0x7ebd6750c54fd6e4667af4d3310cf02bc420606f6e3eaed9654127047f5166c0",
+    "feeRecipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+    "feeBps": 333,
+    "grossPrice": "100003",
+    "netPrincipalPerToken": "96672",
+    "council": "0x897fA0F6857cd9c0A6343DbbCB49bCe1A51E2d43",
+    "guardians": [
+      "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+      "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+      "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+    ]
+  },
+  "council": "0x897fA0F6857cd9c0A6343DbbCB49bCe1A51E2d43",
+  "periodStart": "1793888634",
+  "netReceived": "290019",
+  "upfront": "87006",
+  "firstCyclePayment": "33834",
+  "escapePool": "169179",
+  "refunds": "169179",
+  "metadataGas": "37222109",
+  "htmlHash": "0x9504c7838ece6654667cc5f4816ed54c85bbdd6098e15f299f9b67f14434c35f",
+  "finalBalance": 0,
+  "checks": [
+    "real SeaDrop funded mint",
+    "upfront without review",
+    "manual stream start after finalization",
+    "30-day approval and capped claim",
+    "explicit rejection blocks fallback",
+    "two consecutive rejections",
+    "separate majority escape vote",
+    "owner claims stopped",
+    "all remaining ETH refunded",
+    "NFTs burned",
+    "exact conservation",
+    "same embedded card player"
+  ]
+}

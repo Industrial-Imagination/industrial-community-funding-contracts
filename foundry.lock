@@ -1,0 +1,20 @@
+{
+  "lib/seadrop": {
+    "rev": "d098c56402af44c850cfb93b06441a835f232936"
+  },
+  "lib/ethfs": {
+    "rev": "31e9951be70eee9de985bfdc9fa5d1848bf8f2c2"
+  },
+  "lib/forge-std": {
+    "tag": {
+      "name": "v1.17.0",
+      "rev": "f3dae6e6ee381f25eb6a246f7da9b85c91a68219"
+    }
+  },
+  "lib/solady": {
+    "tag": {
+      "name": "v0.1.26",
+      "rev": "acd959aa4bd04720d640bf4e6a5c71037510cc4b"
+    }
+  }
+}
